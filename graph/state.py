@@ -9,6 +9,11 @@ class TicketState(TypedDict, total=False):
 
     # Sanitization
     masked_message: str
+    
+    # Guardrails
+    input_allowed: bool
+    guardrail_status: str
+    guardrail_reason: str
 
     # Analysis
     issues: list[dict[str, Any]]

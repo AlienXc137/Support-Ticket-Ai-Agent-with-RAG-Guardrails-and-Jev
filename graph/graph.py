@@ -3,6 +3,7 @@ from langgraph.graph import StateGraph, START, END
 from graph.state import TicketState
 
 from graph.nodes.sanitize import sanitize_ticket
+from graph.nodes.guardrails import input_guardrail
 from graph.nodes.analyzer import analyze_ticket
 from graph.nodes.retrieval import retrieve_knowledge
 from graph.nodes.coverage import check_kb_coverage
@@ -12,8 +13,25 @@ from graph.nodes.verification import verify_response
 from graph.nodes.decision import make_decision
 
 
-def route_after_coverage(state: TicketState) -> str:
-    if state.get("web_required", False):
+def route_after_input_guardrail(
+    state: TicketState,
+) -> str:
+    if not state.get(
+        "input_allowed",
+        True,
+    ):
+        return "blocked"
+
+    return "continue"
+
+
+def route_after_coverage(
+    state: TicketState,
+) -> str:
+    if state.get(
+        "web_required",
+        False,
+    ):
         return "web_search"
 
     return "draft_response"
@@ -25,6 +43,11 @@ def build_graph():
     graph.add_node(
         "sanitize_ticket",
         sanitize_ticket,
+    )
+
+    graph.add_node(
+        "input_guardrail",
+        input_guardrail,
     )
 
     graph.add_node(
@@ -69,7 +92,16 @@ def build_graph():
 
     graph.add_edge(
         "sanitize_ticket",
-        "analyze_ticket",
+        "input_guardrail",
+    )
+
+    graph.add_conditional_edges(
+        "input_guardrail",
+        route_after_input_guardrail,
+        {
+            "continue": "analyze_ticket",
+            "blocked": END,
+        },
     )
 
     graph.add_edge(

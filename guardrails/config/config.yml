@@ -1,0 +1,22 @@
+models:
+  # Main NeMo model
+  - type: main
+    engine: openai
+    model: openai/gpt-oss-safeguard-20b
+    api_key_env_var: AI_GATEWAY_API_KEY
+    parameters:
+      base_url: "https://ai-gateway.vercel.sh/v1"
+
+  # Dedicated model for input safety
+  - type: self_check_input
+    engine: openai
+    model: openai/gpt-oss-safeguard-20b
+    api_key_env_var: AI_GATEWAY_API_KEY
+    parameters:
+      base_url: "https://ai-gateway.vercel.sh/v1"
+
+rails:
+  input:
+    parallel: false
+    flows:
+      - self check input
