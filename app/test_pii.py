@@ -6,6 +6,7 @@ def main():
         "My email is student@example.com and I cannot access my course.",
         "Call me at 9876543210 regarding my account.",
         "My student ID is GCET20261234 and I need help.",
+        "My roll number is GCET20261234.",
         "My Aadhaar number is 1234 5678 9012.",
         "I cannot access my course recordings.",
     ]

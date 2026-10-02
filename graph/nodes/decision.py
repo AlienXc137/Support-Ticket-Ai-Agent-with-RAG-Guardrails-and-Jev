@@ -16,7 +16,12 @@ def make_decision(state: TicketState) -> TicketState:
         False,
     )
 
-    reasons = []
+    existing_reasons = state.get(
+        "reason_codes",
+        [],
+    )
+
+    reasons = list(existing_reasons)
 
     if category in {
         "payment",
@@ -35,6 +40,17 @@ def make_decision(state: TicketState) -> TicketState:
         reasons.append(
             "WEB_SOURCED_RESPONSE"
         )
+
+    # If the KB was insufficient and we could not
+    # use an approved external source, human review
+    # is required.
+    if state.get("web_required", False) and not web_used:
+        reasons.append(
+            "WEB_UNAVAILABLE_OR_NOT_ALLOWED"
+        )
+
+    # Preserve ordering while removing duplicates.
+    reasons = list(dict.fromkeys(reasons))
 
     if reasons:
         return {

@@ -1,19 +1,27 @@
 import os
+
 from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
+from langchain_openai import OpenAIEmbeddings
 
 
-from langchain_huggingface import HuggingFaceEmbeddings
+load_dotenv()
 
 
-def get_embeddings():
-    load_dotenv()
-    return HuggingFaceEmbeddings(
-        model_name=os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2"),
-        model_kwargs={
-            "device": "cpu",
-        },
-        encode_kwargs={
-            "normalize_embeddings": True,
-        },
+def get_embeddings() -> OpenAIEmbeddings:
+    api_key = os.getenv("AI_GATEWAY_API_KEY")
+
+    if not api_key:
+        raise ValueError(
+            "AI_GATEWAY_API_KEY is not set."
+        )
+
+    return OpenAIEmbeddings(
+        model="openai/text-embedding-3-small",
+        api_key=api_key,
+        base_url="https://ai-gateway.vercel.sh/v1",
+
+        # Important for Vercel AI Gateway:
+        # send raw text strings instead of LangChain's
+        # pre-tokenized integer arrays.
+        check_embedding_ctx_length=False,
     )

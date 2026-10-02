@@ -1,44 +1,99 @@
-import re
+from presidio_analyzer import (
+    AnalyzerEngine,
+    Pattern,
+    PatternRecognizer,
+)
+from presidio_analyzer.predefined_recognizers import InAadhaarRecognizer
+from presidio_anonymizer import AnonymizerEngine
+from presidio_anonymizer.entities import OperatorConfig
 
 
-PII_PATTERNS = {
-    "email": re.compile(
-        r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"
+# Presidio engines
+analyzer = AnalyzerEngine()
+anonymizer = AnonymizerEngine()
+
+# Indian Aadhaar recognizer
+analyzer.registry.add_recognizer(
+    InAadhaarRecognizer()
+)
+
+# Custom student ID recognizer
+student_id_pattern = Pattern(
+    name="student_id_pattern",
+    regex=(
+        r"\b(?:student\s*id|roll\s*no|roll\s*number|"
+        r"registration\s*no)\s*"
+        r"(?:is|=|:|#|-)?\s*"
+        r"[A-Za-z0-9/-]{4,}\b"
     ),
-    "phone": re.compile(
-        r"\b(?:\+91[-\s]?)?[6-9]\d{9}\b"
-    ),
-    "student_id": re.compile(
-        r"\b(?:student\s*id|roll\s*no|roll\s*number|registration\s*no)"
-        r"\s*[:#-]?\s*[A-Za-z0-9/-]{4,}\b",
-        re.IGNORECASE,
-    ),
-    "aadhaar": re.compile(
-        r"\b\d{4}[\s-]?\d{4}[\s-]?\d{4}\b"
-    ),
+    score=0.85,
+)
+
+student_id_recognizer = PatternRecognizer(
+    supported_entity="STUDENT_ID",
+    patterns=[student_id_pattern],
+)
+
+analyzer.registry.add_recognizer(
+    student_id_recognizer
+)
+
+# Presidio → project entity mapping
+ENTITY_MAP = {
+    "EMAIL_ADDRESS": "email",
+    "PHONE_NUMBER": "phone",
+    "IN_AADHAAR": "aadhaar",
+    "STUDENT_ID": "student_id",
 }
 
 
 def mask_pii(text: str) -> tuple[str, list[str]]:
     """
-    Replace detected PII with typed placeholders.
+    Detect and redact PII using Microsoft Presidio.
 
     Returns:
-        masked_text: sanitized text
-        detected_types: list of PII categories detected
+        masked_text:
+            Text with detected PII replaced by typed placeholders.
+
+        detected_types:
+            Project-level PII labels.
     """
 
-    detected_types: list[str] = []
+    results = analyzer.analyze(
+        text=text,
+        language="en",
+        entities=list(ENTITY_MAP.keys()),
+        score_threshold=0.4,
+    )
 
-    masked_text = text
+    detected_types = []
 
-    for pii_type, pattern in PII_PATTERNS.items():
-        if pattern.search(masked_text):
-            detected_types.append(pii_type)
+    for result in results:
+        mapped_type = ENTITY_MAP.get(result.entity_type)
 
-            masked_text = pattern.sub(
-                f"[REDACTED_{pii_type.upper()}]",
-                masked_text,
-            )
+        if (
+            mapped_type
+            and mapped_type not in detected_types
+        ):
+            detected_types.append(mapped_type)
 
-    return masked_text, detected_types
+    operators = {
+        entity_type: OperatorConfig(
+            "replace",
+            {
+                "new_value": (
+                    f"[REDACTED_{project_type.upper()}]"
+                )
+            },
+        )
+        for entity_type, project_type
+        in ENTITY_MAP.items()
+    }
+
+    anonymized = anonymizer.anonymize(
+        text=text,
+        analyzer_results=results,
+        operators=operators,
+    )
+
+    return anonymized.text, detected_types

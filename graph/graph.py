@@ -16,10 +16,7 @@ from graph.nodes.decision import make_decision
 def route_after_input_guardrail(
     state: TicketState,
 ) -> str:
-    if not state.get(
-        "input_allowed",
-        True,
-    ):
+    if not state.get("input_allowed", True):
         return "blocked"
 
     return "continue"
@@ -28,13 +25,31 @@ def route_after_input_guardrail(
 def route_after_coverage(
     state: TicketState,
 ) -> str:
-    if state.get(
-        "web_required",
-        False,
-    ):
-        return "web_search"
+    if not state.get("web_required", False):
+        return "draft_response"
 
-    return "draft_response"
+    source_type = state.get(
+        "web_source_type",
+        "other",
+    )
+
+    # Private account information must never go
+    # through external web retrieval.
+    if source_type == "private_account_data":
+        return "human_review"
+
+    return "web_search"
+
+
+def route_after_web_search(
+    state: TicketState,
+) -> str:
+    if state.get("web_used", False):
+        return "draft_response"
+
+    # Web was requested but policy/search did not
+    # provide an allowed external source.
+    return "human_review"
 
 
 def build_graph():
@@ -118,14 +133,19 @@ def build_graph():
         "check_kb_coverage",
         route_after_coverage,
         {
-            "web_search": "web_search",
             "draft_response": "draft_response",
+            "web_search": "web_search",
+            "human_review": "make_decision",
         },
     )
 
-    graph.add_edge(
+    graph.add_conditional_edges(
         "web_search",
-        "draft_response",
+        route_after_web_search,
+        {
+            "draft_response": "draft_response",
+            "human_review": "make_decision",
+        },
     )
 
     graph.add_edge(

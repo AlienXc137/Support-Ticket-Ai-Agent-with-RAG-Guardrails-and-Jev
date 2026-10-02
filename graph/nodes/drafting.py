@@ -58,14 +58,14 @@ CONTENT: {document.get("content", "")}
         citation_id = f"web-{index + 1}"
 
         context_parts.append(
-            f"""
-SOURCE TYPE: WEB
+    f"""
+SOURCE TYPE: APPROVED_WEB
 SOURCE ID: {citation_id}
 TITLE: {result.get("title", "")}
 URL: {result.get("url", "")}
 CONTENT: {result.get("content", "")}
 """
-        )
+)
 
         valid_citation_ids.add(
             citation_id
