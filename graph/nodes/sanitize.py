@@ -1,14 +1,13 @@
 from graph.state import TicketState
+from guardrails.pii import mask_pii
 
 
 def sanitize_ticket(state: TicketState) -> TicketState:
-    message = state["raw_message"]
+    raw_message = state["raw_message"]
 
-    # Very basic placeholder for now.
-    # Real PII masking will be added later.
-    masked_message = message.strip()
+    masked_message, pii_detected = mask_pii(raw_message)
 
     return {
-        **state,
         "masked_message": masked_message,
+        "pii_detected": pii_detected,
     }

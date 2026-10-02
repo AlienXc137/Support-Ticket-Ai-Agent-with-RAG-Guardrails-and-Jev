@@ -3,12 +3,12 @@ from guardrails.input import check_input
 
 
 def input_guardrail(state: TicketState) -> TicketState:
-    result = check_input(state["masked_message"])
+    message = state["masked_message"]
+
+    result = check_input(message)
 
     return {
-        **state,
         "input_allowed": result["allowed"],
-        "guardrail_status": result["status"],
+        "guardrail_status": result["status"].value,
         "guardrail_reason": result["reason"],
-        "masked_message": result["message"],
     }

@@ -9,6 +9,7 @@ class TicketState(TypedDict, total=False):
 
     # Sanitization
     masked_message: str
+    pii_detected: list[str]
     
     # Guardrails
     input_allowed: bool
