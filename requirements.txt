@@ -1,0 +1,50 @@
+# API
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Agentic workflow
+langgraph
+
+# LangChain
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-huggingface
+langchain-text-splitters
+langchain-tavily
+
+# LLM / Gateway
+openai
+
+# Guardrails
+nemoguardrails
+
+# Semantic decisioning
+jev
+
+# RAG
+faiss-cpu
+rank-bm25
+sentence-transformers
+
+# Web
+tavily-python
+
+# HTTP / configuration
+httpx
+python-dotenv
+pyyaml
+
+# Persistence
+aiosqlite
+sqlalchemy
+
+# UI
+streamlit
+
+# Testing
+pytest
+pytest-asyncio

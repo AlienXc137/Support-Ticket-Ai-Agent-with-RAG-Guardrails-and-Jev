@@ -1,0 +1,19 @@
+institute_info:
+  enabled: true
+  domains: []
+
+public_exam_info:
+  enabled: true
+  domains: []
+
+general_knowledge:
+  enabled: true
+  domains: []
+
+private_account_data:
+  enabled: false
+  domains: []
+
+other:
+  enabled: false
+  domains: []
