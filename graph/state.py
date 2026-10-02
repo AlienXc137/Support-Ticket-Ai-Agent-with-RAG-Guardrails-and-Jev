@@ -10,7 +10,7 @@ class TicketState(TypedDict, total=False):
     # Sanitization
     masked_message: str
     pii_detected: list[str]
-    
+
     # Guardrails
     input_allowed: bool
     guardrail_status: str
@@ -54,6 +54,13 @@ class TicketState(TypedDict, total=False):
     # Final decision
     decision: str
     reason_codes: list[str]
+
+    # Human-in-the-loop
+    review_status: str
+    human_decision: str
+    reviewer_note: str
+    final_response: str
+    delivery_status: str
 
     # Errors
     error: str | None

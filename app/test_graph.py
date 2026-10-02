@@ -7,7 +7,7 @@ def main():
     ticket = {
         "ticket_id": "WEB-001",
         "raw_message": (
-            "When is the next public examination scheduled?"
+            "I cannot access my course recordings."
         ),
         "channel": "web",
     }
