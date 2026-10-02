@@ -1,22 +1,29 @@
-from langgraph.graph import StateGraph, START, END
+from langgraph.graph import END, START, StateGraph
 
 from graph.state import TicketState
 
-from graph.nodes.sanitize import sanitize_ticket
-from graph.nodes.guardrails import input_guardrail
 from graph.nodes.analyzer import analyze_ticket
-from graph.nodes.retrieval import retrieve_knowledge
 from graph.nodes.coverage import check_kb_coverage
-from graph.nodes.web_search import web_search
-from graph.nodes.drafting import draft_response
-from graph.nodes.verification import verify_response
 from graph.nodes.decision import make_decision
+from graph.nodes.drafting import draft_response
+from graph.nodes.guardrails import input_guardrail
+from graph.nodes.retrieval import retrieve_knowledge
+from graph.nodes.sanitize import sanitize_ticket
+from graph.nodes.verification import (
+    MAX_RETRIES,
+    verify_response,
+)
+from graph.nodes.web_search import web_search
 
 
 def route_after_input_guardrail(
     state: TicketState,
 ) -> str:
-    if not state.get("input_allowed", True):
+
+    if not state.get(
+        "input_allowed",
+        True,
+    ):
         return "blocked"
 
     return "continue"
@@ -25,35 +32,58 @@ def route_after_input_guardrail(
 def route_after_coverage(
     state: TicketState,
 ) -> str:
-    if not state.get("web_required", False):
-        return "draft_response"
 
-    source_type = state.get(
-        "web_source_type",
-        "other",
-    )
+    if state.get(
+        "web_required",
+        False,
+    ):
+        return "web_search"
 
-    # Private account information must never go
-    # through external web retrieval.
-    if source_type == "private_account_data":
-        return "human_review"
-
-    return "web_search"
+    return "draft_response"
 
 
-def route_after_web_search(
+def route_after_verification(
     state: TicketState,
 ) -> str:
-    if state.get("web_used", False):
-        return "draft_response"
 
-    # Web was requested but policy/search did not
-    # provide an allowed external source.
+    if state.get(
+        "verification_passed",
+        False,
+    ):
+        return "decision"
+
+    retry_count = state.get(
+        "retry_count",
+        0,
+    )
+
+    if retry_count < MAX_RETRIES:
+        return "retry"
+
     return "human_review"
 
 
+def prepare_retry(
+    state: TicketState,
+) -> TicketState:
+
+    return {
+        **state,
+        "retry_count": (
+            state.get(
+                "retry_count",
+                0,
+            )
+            + 1
+        ),
+    }
+
+
 def build_graph():
-    graph = StateGraph(TicketState)
+
+    graph = StateGraph(
+        TicketState
+    )
 
     graph.add_node(
         "sanitize_ticket",
@@ -96,6 +126,11 @@ def build_graph():
     )
 
     graph.add_node(
+        "prepare_retry",
+        prepare_retry,
+    )
+
+    graph.add_node(
         "make_decision",
         make_decision,
     )
@@ -133,19 +168,14 @@ def build_graph():
         "check_kb_coverage",
         route_after_coverage,
         {
-            "draft_response": "draft_response",
             "web_search": "web_search",
-            "human_review": "make_decision",
+            "draft_response": "draft_response",
         },
     )
 
-    graph.add_conditional_edges(
+    graph.add_edge(
         "web_search",
-        route_after_web_search,
-        {
-            "draft_response": "draft_response",
-            "human_review": "make_decision",
-        },
+        "draft_response",
     )
 
     graph.add_edge(
@@ -153,9 +183,19 @@ def build_graph():
         "verify_response",
     )
 
-    graph.add_edge(
+    graph.add_conditional_edges(
         "verify_response",
-        "make_decision",
+        route_after_verification,
+        {
+            "decision": "make_decision",
+            "retry": "prepare_retry",
+            "human_review": "make_decision",
+        },
+    )
+
+    graph.add_edge(
+        "prepare_retry",
+        "draft_response",
     )
 
     graph.add_edge(

@@ -11,7 +11,10 @@ response_chain = (
 )
 
 
-def draft_response(state: TicketState) -> TicketState:
+def draft_response(
+    state: TicketState,
+) -> TicketState:
+
     documents = state.get(
         "retrieved_documents",
         [],
@@ -25,7 +28,7 @@ def draft_response(state: TicketState) -> TicketState:
     context_parts = []
     valid_citation_ids = set()
 
-    # Internal KB
+    # Internal KB evidence
     for document in documents:
         metadata = document.get(
             "metadata",
@@ -47,25 +50,26 @@ CONTENT: {document.get("content", "")}
 """
         )
 
-        valid_citation_ids.add(
-            document_id
-        )
+        if document_id:
+            valid_citation_ids.add(
+                document_id
+            )
 
-    # Web sources
+    # Approved web evidence
     for index, result in enumerate(
         web_results
     ):
         citation_id = f"web-{index + 1}"
 
         context_parts.append(
-    f"""
+            f"""
 SOURCE TYPE: APPROVED_WEB
 SOURCE ID: {citation_id}
 TITLE: {result.get("title", "")}
 URL: {result.get("url", "")}
 CONTENT: {result.get("content", "")}
 """
-)
+        )
 
         valid_citation_ids.add(
             citation_id
@@ -75,9 +79,10 @@ CONTENT: {result.get("content", "")}
         return {
             **state,
             "draft": (
-                "We do not currently have enough reliable "
-                "information to answer this request. "
-                "The request requires further review."
+                "We do not currently have enough "
+                "reliable information to answer "
+                "this request. The request requires "
+                "further review."
             ),
             "citations": [],
         }
@@ -86,10 +91,20 @@ CONTENT: {result.get("content", "")}
         context_parts
     )
 
+    verification_feedback = state.get(
+        "verification_feedback",
+        "",
+    )
+
     response = response_chain.invoke(
         {
             "ticket": state["masked_message"],
             "context": context,
+            "verification_feedback": (
+                verification_feedback
+                if verification_feedback
+                else "No previous verification feedback."
+            ),
         }
     )
 

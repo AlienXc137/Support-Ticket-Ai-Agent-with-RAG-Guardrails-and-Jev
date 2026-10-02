@@ -48,3 +48,26 @@ class KBCoverage(BaseModel):
         "private_account_data",
         "other",
     ]
+    
+    
+class VerificationResult(BaseModel):
+    grounded: bool = Field(
+        description=(
+            "Whether the drafted response is fully supported "
+            "by the supplied evidence."
+        )
+    )
+
+    unsupported_claims: list[str] = Field(
+        description=(
+            "Claims in the response that are not supported "
+            "by the supplied evidence."
+        )
+    )
+
+    reasoning: str = Field(
+        description=(
+            "Concise explanation of why the response is "
+            "or is not grounded."
+        )
+    )

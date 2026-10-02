@@ -39,10 +39,16 @@ class TicketState(TypedDict, total=False):
     # Generation
     draft: str
     citations: list[str]
+    verification_feedback: str
 
     # Verification
     verification_passed: bool
     verification_reason: str
+    verification_grounded: bool
+    verification_grounding_probability: float
+    verification_citation_supported: bool
+    verification_citation_probability: float
+    verification_unsupported_claims: list[str]
     retry_count: int
 
     # Final decision

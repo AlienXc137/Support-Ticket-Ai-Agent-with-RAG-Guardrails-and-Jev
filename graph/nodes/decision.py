@@ -1,7 +1,10 @@
 from graph.state import TicketState
 
 
-def make_decision(state: TicketState) -> TicketState:
+def make_decision(
+    state: TicketState,
+) -> TicketState:
+
     category = state.get(
         "primary_category"
     )
@@ -16,12 +19,17 @@ def make_decision(state: TicketState) -> TicketState:
         False,
     )
 
-    existing_reasons = state.get(
-        "reason_codes",
-        [],
+    verification_passed = state.get(
+        "verification_passed",
+        False,
     )
 
-    reasons = list(existing_reasons)
+    reasons = []
+
+    if not verification_passed:
+        reasons.append(
+            "VERIFICATION_FAILED"
+        )
 
     if category in {
         "payment",
@@ -40,17 +48,6 @@ def make_decision(state: TicketState) -> TicketState:
         reasons.append(
             "WEB_SOURCED_RESPONSE"
         )
-
-    # If the KB was insufficient and we could not
-    # use an approved external source, human review
-    # is required.
-    if state.get("web_required", False) and not web_used:
-        reasons.append(
-            "WEB_UNAVAILABLE_OR_NOT_ALLOWED"
-        )
-
-    # Preserve ordering while removing duplicates.
-    reasons = list(dict.fromkeys(reasons))
 
     if reasons:
         return {
