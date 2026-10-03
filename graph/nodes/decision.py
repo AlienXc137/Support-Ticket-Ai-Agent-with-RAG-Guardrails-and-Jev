@@ -1,6 +1,5 @@
 from graph.state import TicketState
 
-
 SENSITIVE_CATEGORIES = {
     "payment",
     "refund",
@@ -24,9 +23,7 @@ def make_decision(
     to make the final routing decision.
     """
 
-    category = state.get(
-        "primary_category"
-    )
+    category = state.get("primary_category")
 
     risk_flags = state.get(
         "risk_flags",
@@ -93,7 +90,6 @@ def make_decision(
             **state,
             "decision": "HUMAN_APPROVE",
             "reason_codes": reasons,
-
             # HITL state
             "review_status": "PENDING",
             "human_decision": "",
@@ -105,10 +101,7 @@ def make_decision(
     return {
         **state,
         "decision": "AUTO_REPLY",
-        "reason_codes": [
-            "STANDARD_SUPPORT_REQUEST"
-        ],
-
+        "reason_codes": ["STANDARD_SUPPORT_REQUEST"],
         # No human review is required.
         "review_status": "NOT_REQUIRED",
         "human_decision": "",

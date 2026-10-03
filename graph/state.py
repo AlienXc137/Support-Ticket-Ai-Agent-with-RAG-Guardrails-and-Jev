@@ -2,7 +2,7 @@ from typing import Any, TypedDict
 
 
 class TicketState(TypedDict, total=False):
-    # Input
+    # Input Ticket
     ticket_id: str
     raw_message: str
     channel: str
@@ -49,6 +49,7 @@ class TicketState(TypedDict, total=False):
     verification_citation_supported: bool
     verification_citation_probability: float
     verification_unsupported_claims: list[str]
+    verification_error: str
     retry_count: int
 
     # Final decision
