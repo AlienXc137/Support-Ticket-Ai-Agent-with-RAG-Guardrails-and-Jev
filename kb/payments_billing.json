@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-009",
+    "title": "Payment failed",
+    "category": "payment",
+    "department": "Payments & Billing",
+    "scenario": "A checkout attempt failed and the student is unsure whether the purchase completed.",
+    "keywords": "payment, failed",
+    "content": "For A checkout attempt failed and the student is unsure whether the purchase completed., support must distinguish the student's description from the authoritative transaction state. Identify the product, order or transaction reference, payment amount, timestamp, account, and final status where available. Failed, pending, reversed, and successful transactions must not be treated as interchangeable. If the payment status is unresolved, do not promise course activation, refund, or cancellation. If the case involves a duplicate, disputed amount, or missing entitlement, verify the original transaction before asking the student to pay again. Financial information must be handled only through approved systems and should never expose unrelated transactions or another student's data."
+  },
+  {
+    "id": "kb-010",
+    "title": "Payment pending",
+    "category": "payment",
+    "department": "Payments & Billing",
+    "scenario": "A transaction remains pending and course activation is unclear.",
+    "keywords": "payment, pending",
+    "content": "For A transaction remains pending and course activation is unclear., support must distinguish the student's description from the authoritative transaction state. Identify the product, order or transaction reference, payment amount, timestamp, account, and final status where available. Failed, pending, reversed, and successful transactions must not be treated as interchangeable. If the payment status is unresolved, do not promise course activation, refund, or cancellation. If the case involves a duplicate, disputed amount, or missing entitlement, verify the original transaction before asking the student to pay again. Financial information must be handled only through approved systems and should never expose unrelated transactions or another student's data."
+  },
+  {
+    "id": "kb-011",
+    "title": "Payment successful but access missing",
+    "category": "payment",
+    "department": "Payments & Billing",
+    "scenario": "The student reports successful payment but no course entitlement.",
+    "keywords": "payment, successful, but, access, missing",
+    "content": "For The student reports successful payment but no course entitlement., support must distinguish the student's description from the authoritative transaction state. Identify the product, order or transaction reference, payment amount, timestamp, account, and final status where available. Failed, pending, reversed, and successful transactions must not be treated as interchangeable. If the payment status is unresolved, do not promise course activation, refund, or cancellation. If the case involves a duplicate, disputed amount, or missing entitlement, verify the original transaction before asking the student to pay again. Financial information must be handled only through approved systems and should never expose unrelated transactions or another student's data."
+  },
+  {
+    "id": "kb-012",
+    "title": "Duplicate payment",
+    "category": "payment",
+    "department": "Payments & Billing",
+    "scenario": "The student believes the same product was charged more than once.",
+    "keywords": "duplicate, payment",
+    "content": "For The student believes the same product was charged more than once., support must distinguish the student's description from the authoritative transaction state. Identify the product, order or transaction reference, payment amount, timestamp, account, and final status where available. Failed, pending, reversed, and successful transactions must not be treated as interchangeable. If the payment status is unresolved, do not promise course activation, refund, or cancellation. If the case involves a duplicate, disputed amount, or missing entitlement, verify the original transaction before asking the student to pay again. Financial information must be handled only through approved systems and should never expose unrelated transactions or another student's data."
+  },
+  {
+    "id": "kb-013",
+    "title": "Wrong amount charged",
+    "category": "payment",
+    "department": "Payments & Billing",
+    "scenario": "The student disputes the amount captured for a purchase.",
+    "keywords": "wrong, amount, charged",
+    "content": "For The student disputes the amount captured for a purchase., support must distinguish the student's description from the authoritative transaction state. Identify the product, order or transaction reference, payment amount, timestamp, account, and final status where available. Failed, pending, reversed, and successful transactions must not be treated as interchangeable. If the payment status is unresolved, do not promise course activation, refund, or cancellation. If the case involves a duplicate, disputed amount, or missing entitlement, verify the original transaction before asking the student to pay again. Financial information must be handled only through approved systems and should never expose unrelated transactions or another student's data."
+  },
+  {
+    "id": "kb-014",
+    "title": "Coupon not applied",
+    "category": "payment",
+    "department": "Payments & Billing",
+    "scenario": "A discount or promotional code was not reflected in the final amount.",
+    "keywords": "coupon, not, applied",
+    "content": "For A discount or promotional code was not reflected in the final amount., support must distinguish the student's description from the authoritative transaction state. Identify the product, order or transaction reference, payment amount, timestamp, account, and final status where available. Failed, pending, reversed, and successful transactions must not be treated as interchangeable. If the payment status is unresolved, do not promise course activation, refund, or cancellation. If the case involves a duplicate, disputed amount, or missing entitlement, verify the original transaction before asking the student to pay again. Financial information must be handled only through approved systems and should never expose unrelated transactions or another student's data."
+  },
+  {
+    "id": "kb-015",
+    "title": "Payment receipt request",
+    "category": "payment",
+    "department": "Payments & Billing",
+    "scenario": "The student needs a receipt or invoice for a completed transaction.",
+    "keywords": "payment, receipt, request",
+    "content": "For The student needs a receipt or invoice for a completed transaction., support must distinguish the student's description from the authoritative transaction state. Identify the product, order or transaction reference, payment amount, timestamp, account, and final status where available. Failed, pending, reversed, and successful transactions must not be treated as interchangeable. If the payment status is unresolved, do not promise course activation, refund, or cancellation. If the case involves a duplicate, disputed amount, or missing entitlement, verify the original transaction before asking the student to pay again. Financial information must be handled only through approved systems and should never expose unrelated transactions or another student's data."
+  },
+  {
+    "id": "kb-016",
+    "title": "Payment reversed",
+    "category": "payment",
+    "department": "Payments & Billing",
+    "scenario": "A previously attempted payment appears to have been reversed or automatically returned.",
+    "keywords": "payment, reversed",
+    "content": "For A previously attempted payment appears to have been reversed or automatically returned., support must distinguish the student's description from the authoritative transaction state. Identify the product, order or transaction reference, payment amount, timestamp, account, and final status where available. Failed, pending, reversed, and successful transactions must not be treated as interchangeable. If the payment status is unresolved, do not promise course activation, refund, or cancellation. If the case involves a duplicate, disputed amount, or missing entitlement, verify the original transaction before asking the student to pay again. Financial information must be handled only through approved systems and should never expose unrelated transactions or another student's data."
+  }
+]

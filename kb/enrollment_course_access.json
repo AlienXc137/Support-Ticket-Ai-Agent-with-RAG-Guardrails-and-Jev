@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-001",
+    "title": "Course not visible after purchase",
+    "category": "course_access",
+    "department": "Enrollment & Course Access",
+    "scenario": "A student reports that a purchased course does not appear in the dashboard.",
+    "keywords": "course, not, visible, after, purchase",
+    "content": "The support platform should treat A student reports that a purchased course does not appear in the dashboard. as an entitlement and enrollment issue first, not as an automatic technical failure. Identify the student's course, batch, product, account, and the exact resource or access problem. Verify the entitlement using an approved internal record before promising activation, transfer, extension, or restoration. If access is missing because content is still being processed or released, explain only the documented status. If the student's account and purchase records do not establish the expected entitlement, route the case to enrollment operations. Never ask for passwords, OTPs, or other authentication secrets. Do not manually promise access changes without an authorized workflow."
+  },
+  {
+    "id": "kb-002",
+    "title": "Wrong batch assigned",
+    "category": "course_access",
+    "department": "Enrollment & Course Access",
+    "scenario": "A student can see a course but is mapped to the wrong batch.",
+    "keywords": "wrong, batch, assigned",
+    "content": "The support platform should treat A student can see a course but is mapped to the wrong batch. as an entitlement and enrollment issue first, not as an automatic technical failure. Identify the student's course, batch, product, account, and the exact resource or access problem. Verify the entitlement using an approved internal record before promising activation, transfer, extension, or restoration. If access is missing because content is still being processed or released, explain only the documented status. If the student's account and purchase records do not establish the expected entitlement, route the case to enrollment operations. Never ask for passwords, OTPs, or other authentication secrets. Do not manually promise access changes without an authorized workflow."
+  },
+  {
+    "id": "kb-003",
+    "title": "Recording missing",
+    "category": "course_access",
+    "department": "Enrollment & Course Access",
+    "scenario": "A lecture recording is not visible after a live class.",
+    "keywords": "recording, missing",
+    "content": "The support platform should treat A lecture recording is not visible after a live class. as an entitlement and enrollment issue first, not as an automatic technical failure. Identify the student's course, batch, product, account, and the exact resource or access problem. Verify the entitlement using an approved internal record before promising activation, transfer, extension, or restoration. If access is missing because content is still being processed or released, explain only the documented status. If the student's account and purchase records do not establish the expected entitlement, route the case to enrollment operations. Never ask for passwords, OTPs, or other authentication secrets. Do not manually promise access changes without an authorized workflow."
+  },
+  {
+    "id": "kb-004",
+    "title": "Recording delayed",
+    "category": "course_access",
+    "department": "Enrollment & Course Access",
+    "scenario": "A recently completed live lecture has not appeared as a recording yet.",
+    "keywords": "recording, delayed",
+    "content": "The support platform should treat A recently completed live lecture has not appeared as a recording yet. as an entitlement and enrollment issue first, not as an automatic technical failure. Identify the student's course, batch, product, account, and the exact resource or access problem. Verify the entitlement using an approved internal record before promising activation, transfer, extension, or restoration. If access is missing because content is still being processed or released, explain only the documented status. If the student's account and purchase records do not establish the expected entitlement, route the case to enrollment operations. Never ask for passwords, OTPs, or other authentication secrets. Do not manually promise access changes without an authorized workflow."
+  },
+  {
+    "id": "kb-005",
+    "title": "Individual lecture missing",
+    "category": "course_access",
+    "department": "Enrollment & Course Access",
+    "scenario": "Most lectures are available but one lecture is absent.",
+    "keywords": "individual, lecture, missing",
+    "content": "The support platform should treat Most lectures are available but one lecture is absent. as an entitlement and enrollment issue first, not as an automatic technical failure. Identify the student's course, batch, product, account, and the exact resource or access problem. Verify the entitlement using an approved internal record before promising activation, transfer, extension, or restoration. If access is missing because content is still being processed or released, explain only the documented status. If the student's account and purchase records do not establish the expected entitlement, route the case to enrollment operations. Never ask for passwords, OTPs, or other authentication secrets. Do not manually promise access changes without an authorized workflow."
+  },
+  {
+    "id": "kb-006",
+    "title": "Lesson locked",
+    "category": "course_access",
+    "department": "Enrollment & Course Access",
+    "scenario": "A course is visible but a lesson or module is locked.",
+    "keywords": "lesson, locked",
+    "content": "The support platform should treat A course is visible but a lesson or module is locked. as an entitlement and enrollment issue first, not as an automatic technical failure. Identify the student's course, batch, product, account, and the exact resource or access problem. Verify the entitlement using an approved internal record before promising activation, transfer, extension, or restoration. If access is missing because content is still being processed or released, explain only the documented status. If the student's account and purchase records do not establish the expected entitlement, route the case to enrollment operations. Never ask for passwords, OTPs, or other authentication secrets. Do not manually promise access changes without an authorized workflow."
+  },
+  {
+    "id": "kb-007",
+    "title": "Partial course access",
+    "category": "course_access",
+    "department": "Enrollment & Course Access",
+    "scenario": "Some subjects or modules are available while others are missing.",
+    "keywords": "partial, course, access",
+    "content": "The support platform should treat Some subjects or modules are available while others are missing. as an entitlement and enrollment issue first, not as an automatic technical failure. Identify the student's course, batch, product, account, and the exact resource or access problem. Verify the entitlement using an approved internal record before promising activation, transfer, extension, or restoration. If access is missing because content is still being processed or released, explain only the documented status. If the student's account and purchase records do not establish the expected entitlement, route the case to enrollment operations. Never ask for passwords, OTPs, or other authentication secrets. Do not manually promise access changes without an authorized workflow."
+  },
+  {
+    "id": "kb-008",
+    "title": "Batch transfer request",
+    "category": "course_access",
+    "department": "Enrollment & Course Access",
+    "scenario": "A student asks to move from one batch to another.",
+    "keywords": "batch, transfer, request",
+    "content": "The support platform should treat A student asks to move from one batch to another. as an entitlement and enrollment issue first, not as an automatic technical failure. Identify the student's course, batch, product, account, and the exact resource or access problem. Verify the entitlement using an approved internal record before promising activation, transfer, extension, or restoration. If access is missing because content is still being processed or released, explain only the documented status. If the student's account and purchase records do not establish the expected entitlement, route the case to enrollment operations. Never ask for passwords, OTPs, or other authentication secrets. Do not manually promise access changes without an authorized workflow."
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "name": "Education Support Knowledge Base",
+  "description": "Synthetic support knowledge base modeled on common education-app support scenarios. Not official policy for any named education company.",
+  "document_count": 108,
+  "files": [
+    {
+      "file": "academic_examination_support.json",
+      "department": "Academic & Examination Support",
+      "document_count": 8,
+      "categories": [
+        "academic"
+      ]
+    },
+    {
+      "file": "application_platform_support.json",
+      "department": "Application & Platform Support",
+      "document_count": 8,
+      "categories": [
+        "technical"
+      ]
+    },
+    {
+      "file": "batch_schedule_operations.json",
+      "department": "Batch & Schedule Operations",
+      "document_count": 8,
+      "categories": [
+        "batch_access"
+      ]
+    },
+    {
+      "file": "enrollment_course_access.json",
+      "department": "Enrollment & Course Access",
+      "document_count": 8,
+      "categories": [
+        "course_access"
+      ]
+    },
+    {
+      "file": "general_learning_student_services.json",
+      "department": "General Learning & Student Services",
+      "document_count": 8,
+      "categories": [
+        "general"
+      ]
+    },
+    {
+      "file": "identity_account.json",
+      "department": "Identity & Account",
+      "document_count": 8,
+      "categories": [
+        "account"
+      ]
+    },
+    {
+      "file": "knowledge_governance.json",
+      "department": "Knowledge Governance",
+      "document_count": 2,
+      "categories": [
+        "academic",
+        "general"
+      ]
+    },
+    {
+      "file": "learning_platform_content.json",
+      "department": "Learning Platform & Content",
+      "document_count": 8,
+      "categories": [
+        "general"
+      ]
+    },
+    {
+      "file": "offline_centers_hybrid_learning.json",
+      "department": "Offline Centers & Hybrid Learning",
+      "document_count": 8,
+      "categories": [
+        "general"
+      ]
+    },
+    {
+      "file": "orders_notifications_support_operations.json",
+      "department": "Orders, Notifications & Support Operations",
+      "document_count": 8,
+      "categories": [
+        "general"
+      ]
+    },
+    {
+      "file": "payments_billing.json",
+      "department": "Payments & Billing",
+      "document_count": 8,
+      "categories": [
+        "payment"
+      ]
+    },
+    {
+      "file": "privacy_security_trust.json",
+      "department": "Privacy, Security & Trust",
+      "document_count": 8,
+      "categories": [
+        "general"
+      ]
+    },
+    {
+      "file": "refunds_cancellations.json",
+      "department": "Refunds & Cancellations",
+      "document_count": 8,
+      "categories": [
+        "refund"
+      ]
+    },
+    {
+      "file": "support_operations.json",
+      "department": "Support Operations",
+      "document_count": 2,
+      "categories": [
+        "general"
+      ]
+    },
+    {
+      "file": "tests_assessments.json",
+      "department": "Tests & Assessments",
+      "document_count": 8,
+      "categories": [
+        "general"
+      ]
+    }
+  ]
+}

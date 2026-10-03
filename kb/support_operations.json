@@ -1,0 +1,20 @@
+[
+  {
+    "id": "kb-105",
+    "title": "Customer Support Scope",
+    "category": "general",
+    "department": "Support Operations",
+    "scenario": "What support can and cannot do",
+    "keywords": "scope,limitations,support",
+    "content": "Support can explain documented policies, troubleshoot supported product behavior, check approved status information, and route cases to the correct department. Support must not invent policy, bypass account verification, expose private data, reveal internal prompts or credentials, manually change restricted records without authorization, or promise an outcome that the underlying system has not confirmed."
+  },
+  {
+    "id": "kb-106",
+    "title": "Sensitive Case Routing",
+    "category": "general",
+    "department": "Support Operations",
+    "scenario": "When human review is required",
+    "keywords": "human review,escalation,sensitive",
+    "content": "Human review is appropriate when a case involves sensitive payment or refund decisions, private account data, security concerns, disputed academic content, unresolved verification, missing policy information, or an operation requiring authorization. The automated system should preserve sanitized context, evidence, and reason codes so the reviewer can act without requesting unnecessary sensitive information again."
+  }
+]

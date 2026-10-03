@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-057",
+    "title": "Batch not visible",
+    "category": "batch_access",
+    "department": "Batch & Schedule Operations",
+    "scenario": "An enrolled batch is missing from the student's account.",
+    "keywords": "batch, not, visible",
+    "content": "For An enrolled batch is missing from the student's account., verify the student's current enrollment, batch, schedule, product tier, and any relevant date or release state. Batch-specific access can control classes, recordings, tests, announcements, and resources. Do not infer a student's batch from a message alone when the account record is available. Schedule and cancellation information is time-sensitive, so use the latest approved announcement. Batch transfers, upgrades, center changes, and eligibility decisions must follow documented rules. If the required policy or availability information is missing, escalate instead of promising a transfer or schedule."
+  },
+  {
+    "id": "kb-058",
+    "title": "Wrong batch notifications",
+    "category": "batch_access",
+    "department": "Batch & Schedule Operations",
+    "scenario": "The student receives announcements for an unexpected batch.",
+    "keywords": "wrong, batch, notifications",
+    "content": "For The student receives announcements for an unexpected batch., verify the student's current enrollment, batch, schedule, product tier, and any relevant date or release state. Batch-specific access can control classes, recordings, tests, announcements, and resources. Do not infer a student's batch from a message alone when the account record is available. Schedule and cancellation information is time-sensitive, so use the latest approved announcement. Batch transfers, upgrades, center changes, and eligibility decisions must follow documented rules. If the required policy or availability information is missing, escalate instead of promising a transfer or schedule."
+  },
+  {
+    "id": "kb-059",
+    "title": "Class schedule missing",
+    "category": "batch_access",
+    "department": "Batch & Schedule Operations",
+    "scenario": "The student cannot find an expected class in the batch schedule.",
+    "keywords": "class, schedule, missing",
+    "content": "For The student cannot find an expected class in the batch schedule., verify the student's current enrollment, batch, schedule, product tier, and any relevant date or release state. Batch-specific access can control classes, recordings, tests, announcements, and resources. Do not infer a student's batch from a message alone when the account record is available. Schedule and cancellation information is time-sensitive, so use the latest approved announcement. Batch transfers, upgrades, center changes, and eligibility decisions must follow documented rules. If the required policy or availability information is missing, escalate instead of promising a transfer or schedule."
+  },
+  {
+    "id": "kb-060",
+    "title": "Class rescheduled",
+    "category": "batch_access",
+    "department": "Batch & Schedule Operations",
+    "scenario": "A student asks about a changed class time.",
+    "keywords": "class, rescheduled",
+    "content": "For A student asks about a changed class time., verify the student's current enrollment, batch, schedule, product tier, and any relevant date or release state. Batch-specific access can control classes, recordings, tests, announcements, and resources. Do not infer a student's batch from a message alone when the account record is available. Schedule and cancellation information is time-sensitive, so use the latest approved announcement. Batch transfers, upgrades, center changes, and eligibility decisions must follow documented rules. If the required policy or availability information is missing, escalate instead of promising a transfer or schedule."
+  },
+  {
+    "id": "kb-061",
+    "title": "Class cancellation",
+    "category": "batch_access",
+    "department": "Batch & Schedule Operations",
+    "scenario": "A student wants confirmation about a cancelled class.",
+    "keywords": "class, cancellation",
+    "content": "For A student wants confirmation about a cancelled class., verify the student's current enrollment, batch, schedule, product tier, and any relevant date or release state. Batch-specific access can control classes, recordings, tests, announcements, and resources. Do not infer a student's batch from a message alone when the account record is available. Schedule and cancellation information is time-sensitive, so use the latest approved announcement. Batch transfers, upgrades, center changes, and eligibility decisions must follow documented rules. If the required policy or availability information is missing, escalate instead of promising a transfer or schedule."
+  },
+  {
+    "id": "kb-062",
+    "title": "Batch upgrade",
+    "category": "batch_access",
+    "department": "Batch & Schedule Operations",
+    "scenario": "A student asks to move to a higher-tier or different batch.",
+    "keywords": "batch, upgrade",
+    "content": "For A student asks to move to a higher-tier or different batch., verify the student's current enrollment, batch, schedule, product tier, and any relevant date or release state. Batch-specific access can control classes, recordings, tests, announcements, and resources. Do not infer a student's batch from a message alone when the account record is available. Schedule and cancellation information is time-sensitive, so use the latest approved announcement. Batch transfers, upgrades, center changes, and eligibility decisions must follow documented rules. If the required policy or availability information is missing, escalate instead of promising a transfer or schedule."
+  },
+  {
+    "id": "kb-063",
+    "title": "Batch eligibility",
+    "category": "batch_access",
+    "department": "Batch & Schedule Operations",
+    "scenario": "A student asks whether they are eligible for a particular batch.",
+    "keywords": "batch, eligibility",
+    "content": "For A student asks whether they are eligible for a particular batch., verify the student's current enrollment, batch, schedule, product tier, and any relevant date or release state. Batch-specific access can control classes, recordings, tests, announcements, and resources. Do not infer a student's batch from a message alone when the account record is available. Schedule and cancellation information is time-sensitive, so use the latest approved announcement. Batch transfers, upgrades, center changes, and eligibility decisions must follow documented rules. If the required policy or availability information is missing, escalate instead of promising a transfer or schedule."
+  },
+  {
+    "id": "kb-064",
+    "title": "Offline center transfer",
+    "category": "batch_access",
+    "department": "Batch & Schedule Operations",
+    "scenario": "A student asks to change their assigned offline learning center.",
+    "keywords": "offline, center, transfer",
+    "content": "For A student asks to change their assigned offline learning center., verify the student's current enrollment, batch, schedule, product tier, and any relevant date or release state. Batch-specific access can control classes, recordings, tests, announcements, and resources. Do not infer a student's batch from a message alone when the account record is available. Schedule and cancellation information is time-sensitive, so use the latest approved announcement. Batch transfers, upgrades, center changes, and eligibility decisions must follow documented rules. If the required policy or availability information is missing, escalate instead of promising a transfer or schedule."
+  }
+]

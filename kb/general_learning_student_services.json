@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-049",
+    "title": "Doubt submission",
+    "category": "general",
+    "department": "General Learning & Student Services",
+    "scenario": "A student wants to know how to submit an academic doubt.",
+    "keywords": "doubt, submission",
+    "content": "For A student wants to know how to submit an academic doubt., determine the exact feature, course, batch, and student entitlement before responding. Education platforms can provide multiple learning modes such as live and recorded classes, tests, practice material, doubt support, mentorship, progress dashboards, and certificates. The support response should rely on the approved internal documentation for the specific product. If a feature is plan-specific or time-sensitive, do not assume it is available to every student. If the issue requires account verification, payment investigation, academic judgment, or a restricted operation, route it to the appropriate human team rather than inventing an answer."
+  },
+  {
+    "id": "kb-050",
+    "title": "Unresolved doubt",
+    "category": "general",
+    "department": "General Learning & Student Services",
+    "scenario": "A previously submitted doubt did not resolve the student's question.",
+    "keywords": "unresolved, doubt",
+    "content": "For A previously submitted doubt did not resolve the student's question., determine the exact feature, course, batch, and student entitlement before responding. Education platforms can provide multiple learning modes such as live and recorded classes, tests, practice material, doubt support, mentorship, progress dashboards, and certificates. The support response should rely on the approved internal documentation for the specific product. If a feature is plan-specific or time-sensitive, do not assume it is available to every student. If the issue requires account verification, payment investigation, academic judgment, or a restricted operation, route it to the appropriate human team rather than inventing an answer."
+  },
+  {
+    "id": "kb-051",
+    "title": "AI tutor disagreement",
+    "category": "general",
+    "department": "General Learning & Student Services",
+    "scenario": "A student believes an AI-generated academic explanation is incorrect.",
+    "keywords": "ai, tutor, disagreement",
+    "content": "For A student believes an AI-generated academic explanation is incorrect., determine the exact feature, course, batch, and student entitlement before responding. Education platforms can provide multiple learning modes such as live and recorded classes, tests, practice material, doubt support, mentorship, progress dashboards, and certificates. The support response should rely on the approved internal documentation for the specific product. If a feature is plan-specific or time-sensitive, do not assume it is available to every student. If the issue requires account verification, payment investigation, academic judgment, or a restricted operation, route it to the appropriate human team rather than inventing an answer."
+  },
+  {
+    "id": "kb-052",
+    "title": "Mentor session",
+    "category": "general",
+    "department": "General Learning & Student Services",
+    "scenario": "A student asks how to schedule an eligible mentorship session.",
+    "keywords": "mentor, session",
+    "content": "For A student asks how to schedule an eligible mentorship session., determine the exact feature, course, batch, and student entitlement before responding. Education platforms can provide multiple learning modes such as live and recorded classes, tests, practice material, doubt support, mentorship, progress dashboards, and certificates. The support response should rely on the approved internal documentation for the specific product. If a feature is plan-specific or time-sensitive, do not assume it is available to every student. If the issue requires account verification, payment investigation, academic judgment, or a restricted operation, route it to the appropriate human team rather than inventing an answer."
+  },
+  {
+    "id": "kb-053",
+    "title": "Mentor not assigned",
+    "category": "general",
+    "department": "General Learning & Student Services",
+    "scenario": "A student expects mentorship but cannot see an assigned mentor.",
+    "keywords": "mentor, not, assigned",
+    "content": "For A student expects mentorship but cannot see an assigned mentor., determine the exact feature, course, batch, and student entitlement before responding. Education platforms can provide multiple learning modes such as live and recorded classes, tests, practice material, doubt support, mentorship, progress dashboards, and certificates. The support response should rely on the approved internal documentation for the specific product. If a feature is plan-specific or time-sensitive, do not assume it is available to every student. If the issue requires account verification, payment investigation, academic judgment, or a restricted operation, route it to the appropriate human team rather than inventing an answer."
+  },
+  {
+    "id": "kb-054",
+    "title": "Notes missing",
+    "category": "general",
+    "department": "General Learning & Student Services",
+    "scenario": "Lecture notes or study notes are not visible.",
+    "keywords": "notes, missing",
+    "content": "For Lecture notes or study notes are not visible., determine the exact feature, course, batch, and student entitlement before responding. Education platforms can provide multiple learning modes such as live and recorded classes, tests, practice material, doubt support, mentorship, progress dashboards, and certificates. The support response should rely on the approved internal documentation for the specific product. If a feature is plan-specific or time-sensitive, do not assume it is available to every student. If the issue requires account verification, payment investigation, academic judgment, or a restricted operation, route it to the appropriate human team rather than inventing an answer."
+  },
+  {
+    "id": "kb-055",
+    "title": "Certificate request",
+    "category": "general",
+    "department": "General Learning & Student Services",
+    "scenario": "A student asks about course completion certificates.",
+    "keywords": "certificate, request",
+    "content": "For A student asks about course completion certificates., determine the exact feature, course, batch, and student entitlement before responding. Education platforms can provide multiple learning modes such as live and recorded classes, tests, practice material, doubt support, mentorship, progress dashboards, and certificates. The support response should rely on the approved internal documentation for the specific product. If a feature is plan-specific or time-sensitive, do not assume it is available to every student. If the issue requires account verification, payment investigation, academic judgment, or a restricted operation, route it to the appropriate human team rather than inventing an answer."
+  },
+  {
+    "id": "kb-056",
+    "title": "Progress dashboard mismatch",
+    "category": "general",
+    "department": "General Learning & Student Services",
+    "scenario": "The dashboard progress percentage does not match the student's activity.",
+    "keywords": "progress, dashboard, mismatch",
+    "content": "For The dashboard progress percentage does not match the student's activity., determine the exact feature, course, batch, and student entitlement before responding. Education platforms can provide multiple learning modes such as live and recorded classes, tests, practice material, doubt support, mentorship, progress dashboards, and certificates. The support response should rely on the approved internal documentation for the specific product. If a feature is plan-specific or time-sensitive, do not assume it is available to every student. If the issue requires account verification, payment investigation, academic judgment, or a restricted operation, route it to the appropriate human team rather than inventing an answer."
+  }
+]

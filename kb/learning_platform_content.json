@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-097",
+    "title": "Search cannot find content",
+    "category": "general",
+    "department": "Learning Platform & Content",
+    "scenario": "A student cannot locate a lecture, note, test, or resource using search.",
+    "keywords": "search, cannot, find, content",
+    "content": "For A student cannot locate a lecture, note, test, or resource using search., identify the course, subject, resource type, and expected learning workflow. Learning platforms may contain live classes, recorded lectures, notes, practice assignments, tests, dashboards, and downloadable resources. Resource availability can depend on course entitlement, batch, release schedule, language, device, or completion state. Do not direct students to unofficial copies of paid material. For accessibility or language requests, use documented availability. If progress or completion is inconsistent, identify the underlying activity before escalating. Do not claim a course requirement is completed unless the authoritative record supports it."
+  },
+  {
+    "id": "kb-098",
+    "title": "Language preference",
+    "category": "general",
+    "department": "Learning Platform & Content",
+    "scenario": "A student asks whether a course or resource is available in a particular language.",
+    "keywords": "language, preference",
+    "content": "For A student asks whether a course or resource is available in a particular language., identify the course, subject, resource type, and expected learning workflow. Learning platforms may contain live classes, recorded lectures, notes, practice assignments, tests, dashboards, and downloadable resources. Resource availability can depend on course entitlement, batch, release schedule, language, device, or completion state. Do not direct students to unofficial copies of paid material. For accessibility or language requests, use documented availability. If progress or completion is inconsistent, identify the underlying activity before escalating. Do not claim a course requirement is completed unless the authoritative record supports it."
+  },
+  {
+    "id": "kb-099",
+    "title": "Accessibility request",
+    "category": "general",
+    "department": "Learning Platform & Content",
+    "scenario": "A student asks about captions, readable materials, or another accessibility need.",
+    "keywords": "accessibility, request",
+    "content": "For A student asks about captions, readable materials, or another accessibility need., identify the course, subject, resource type, and expected learning workflow. Learning platforms may contain live classes, recorded lectures, notes, practice assignments, tests, dashboards, and downloadable resources. Resource availability can depend on course entitlement, batch, release schedule, language, device, or completion state. Do not direct students to unofficial copies of paid material. For accessibility or language requests, use documented availability. If progress or completion is inconsistent, identify the underlying activity before escalating. Do not claim a course requirement is completed unless the authoritative record supports it."
+  },
+  {
+    "id": "kb-100",
+    "title": "Watch history missing",
+    "category": "general",
+    "department": "Learning Platform & Content",
+    "scenario": "Lecture completion or watch history is not updating.",
+    "keywords": "watch, history, missing",
+    "content": "For Lecture completion or watch history is not updating., identify the course, subject, resource type, and expected learning workflow. Learning platforms may contain live classes, recorded lectures, notes, practice assignments, tests, dashboards, and downloadable resources. Resource availability can depend on course entitlement, batch, release schedule, language, device, or completion state. Do not direct students to unofficial copies of paid material. For accessibility or language requests, use documented availability. If progress or completion is inconsistent, identify the underlying activity before escalating. Do not claim a course requirement is completed unless the authoritative record supports it."
+  },
+  {
+    "id": "kb-101",
+    "title": "PDF download failure",
+    "category": "general",
+    "department": "Learning Platform & Content",
+    "scenario": "A study-material PDF cannot be downloaded.",
+    "keywords": "pdf, download, failure",
+    "content": "For A study-material PDF cannot be downloaded., identify the course, subject, resource type, and expected learning workflow. Learning platforms may contain live classes, recorded lectures, notes, practice assignments, tests, dashboards, and downloadable resources. Resource availability can depend on course entitlement, batch, release schedule, language, device, or completion state. Do not direct students to unofficial copies of paid material. For accessibility or language requests, use documented availability. If progress or completion is inconsistent, identify the underlying activity before escalating. Do not claim a course requirement is completed unless the authoritative record supports it."
+  },
+  {
+    "id": "kb-102",
+    "title": "Old material version",
+    "category": "general",
+    "department": "Learning Platform & Content",
+    "scenario": "A student believes a study resource is outdated.",
+    "keywords": "old, material, version",
+    "content": "For A student believes a study resource is outdated., identify the course, subject, resource type, and expected learning workflow. Learning platforms may contain live classes, recorded lectures, notes, practice assignments, tests, dashboards, and downloadable resources. Resource availability can depend on course entitlement, batch, release schedule, language, device, or completion state. Do not direct students to unofficial copies of paid material. For accessibility or language requests, use documented availability. If progress or completion is inconsistent, identify the underlying activity before escalating. Do not claim a course requirement is completed unless the authoritative record supports it."
+  },
+  {
+    "id": "kb-103",
+    "title": "Hardcopy material status",
+    "category": "general",
+    "department": "Learning Platform & Content",
+    "scenario": "A student asks whether physical books are included or available.",
+    "keywords": "hardcopy, material, status",
+    "content": "For A student asks whether physical books are included or available., identify the course, subject, resource type, and expected learning workflow. Learning platforms may contain live classes, recorded lectures, notes, practice assignments, tests, dashboards, and downloadable resources. Resource availability can depend on course entitlement, batch, release schedule, language, device, or completion state. Do not direct students to unofficial copies of paid material. For accessibility or language requests, use documented availability. If progress or completion is inconsistent, identify the underlying activity before escalating. Do not claim a course requirement is completed unless the authoritative record supports it."
+  },
+  {
+    "id": "kb-104",
+    "title": "Course completion status",
+    "category": "general",
+    "department": "Learning Platform & Content",
+    "scenario": "The student's completion state has not updated after finishing requirements.",
+    "keywords": "course, completion, status",
+    "content": "For The student's completion state has not updated after finishing requirements., identify the course, subject, resource type, and expected learning workflow. Learning platforms may contain live classes, recorded lectures, notes, practice assignments, tests, dashboards, and downloadable resources. Resource availability can depend on course entitlement, batch, release schedule, language, device, or completion state. Do not direct students to unofficial copies of paid material. For accessibility or language requests, use documented availability. If progress or completion is inconsistent, identify the underlying activity before escalating. Do not claim a course requirement is completed unless the authoritative record supports it."
+  }
+]

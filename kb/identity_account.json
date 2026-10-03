@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-025",
+    "title": "Forgot password",
+    "category": "account",
+    "department": "Identity & Account",
+    "scenario": "A student cannot sign in because the password is forgotten.",
+    "keywords": "forgot, password",
+    "content": "For A student cannot sign in because the password is forgotten., treat the request as an identity and account-security operation. The agent may explain the documented recovery or account-management process, but must never request or expose passwords, OTPs, recovery codes, or full payment credentials. Sensitive changes such as email, phone, ownership, or account consolidation require the platform's approved identity-verification process. If ownership cannot be established, escalate rather than guessing. When multiple accounts exist, identify which account owns the entitlement before discussing migration or merging. Security complaints should be handled conservatively and routed through the approved security process."
+  },
+  {
+    "id": "kb-026",
+    "title": "OTP not received",
+    "category": "account",
+    "department": "Identity & Account",
+    "scenario": "A login or recovery verification code is not arriving.",
+    "keywords": "otp, not, received",
+    "content": "For A login or recovery verification code is not arriving., treat the request as an identity and account-security operation. The agent may explain the documented recovery or account-management process, but must never request or expose passwords, OTPs, recovery codes, or full payment credentials. Sensitive changes such as email, phone, ownership, or account consolidation require the platform's approved identity-verification process. If ownership cannot be established, escalate rather than guessing. When multiple accounts exist, identify which account owns the entitlement before discussing migration or merging. Security complaints should be handled conservatively and routed through the approved security process."
+  },
+  {
+    "id": "kb-027",
+    "title": "Email change",
+    "category": "account",
+    "department": "Identity & Account",
+    "scenario": "A student wants to change the registered email address.",
+    "keywords": "email, change",
+    "content": "For A student wants to change the registered email address., treat the request as an identity and account-security operation. The agent may explain the documented recovery or account-management process, but must never request or expose passwords, OTPs, recovery codes, or full payment credentials. Sensitive changes such as email, phone, ownership, or account consolidation require the platform's approved identity-verification process. If ownership cannot be established, escalate rather than guessing. When multiple accounts exist, identify which account owns the entitlement before discussing migration or merging. Security complaints should be handled conservatively and routed through the approved security process."
+  },
+  {
+    "id": "kb-028",
+    "title": "Phone number change",
+    "category": "account",
+    "department": "Identity & Account",
+    "scenario": "A student wants to change the registered phone number.",
+    "keywords": "phone, number, change",
+    "content": "For A student wants to change the registered phone number., treat the request as an identity and account-security operation. The agent may explain the documented recovery or account-management process, but must never request or expose passwords, OTPs, recovery codes, or full payment credentials. Sensitive changes such as email, phone, ownership, or account consolidation require the platform's approved identity-verification process. If ownership cannot be established, escalate rather than guessing. When multiple accounts exist, identify which account owns the entitlement before discussing migration or merging. Security complaints should be handled conservatively and routed through the approved security process."
+  },
+  {
+    "id": "kb-029",
+    "title": "Locked account",
+    "category": "account",
+    "department": "Identity & Account",
+    "scenario": "Repeated authentication failures appear to have locked the account.",
+    "keywords": "locked, account",
+    "content": "For Repeated authentication failures appear to have locked the account., treat the request as an identity and account-security operation. The agent may explain the documented recovery or account-management process, but must never request or expose passwords, OTPs, recovery codes, or full payment credentials. Sensitive changes such as email, phone, ownership, or account consolidation require the platform's approved identity-verification process. If ownership cannot be established, escalate rather than guessing. When multiple accounts exist, identify which account owns the entitlement before discussing migration or merging. Security complaints should be handled conservatively and routed through the approved security process."
+  },
+  {
+    "id": "kb-030",
+    "title": "Multiple accounts",
+    "category": "account",
+    "department": "Identity & Account",
+    "scenario": "A student has more than one account and cannot find the purchased course.",
+    "keywords": "multiple, accounts",
+    "content": "For A student has more than one account and cannot find the purchased course., treat the request as an identity and account-security operation. The agent may explain the documented recovery or account-management process, but must never request or expose passwords, OTPs, recovery codes, or full payment credentials. Sensitive changes such as email, phone, ownership, or account consolidation require the platform's approved identity-verification process. If ownership cannot be established, escalate rather than guessing. When multiple accounts exist, identify which account owns the entitlement before discussing migration or merging. Security complaints should be handled conservatively and routed through the approved security process."
+  },
+  {
+    "id": "kb-031",
+    "title": "Account recovery",
+    "category": "account",
+    "department": "Identity & Account",
+    "scenario": "A student cannot complete the normal account recovery flow.",
+    "keywords": "account, recovery",
+    "content": "For A student cannot complete the normal account recovery flow., treat the request as an identity and account-security operation. The agent may explain the documented recovery or account-management process, but must never request or expose passwords, OTPs, recovery codes, or full payment credentials. Sensitive changes such as email, phone, ownership, or account consolidation require the platform's approved identity-verification process. If ownership cannot be established, escalate rather than guessing. When multiple accounts exist, identify which account owns the entitlement before discussing migration or merging. Security complaints should be handled conservatively and routed through the approved security process."
+  },
+  {
+    "id": "kb-032",
+    "title": "Unauthorized access",
+    "category": "account",
+    "department": "Identity & Account",
+    "scenario": "A student reports suspicious or unauthorized activity on the account.",
+    "keywords": "unauthorized, access",
+    "content": "For A student reports suspicious or unauthorized activity on the account., treat the request as an identity and account-security operation. The agent may explain the documented recovery or account-management process, but must never request or expose passwords, OTPs, recovery codes, or full payment credentials. Sensitive changes such as email, phone, ownership, or account consolidation require the platform's approved identity-verification process. If ownership cannot be established, escalate rather than guessing. When multiple accounts exist, identify which account owns the entitlement before discussing migration or merging. Security complaints should be handled conservatively and routed through the approved security process."
+  }
+]

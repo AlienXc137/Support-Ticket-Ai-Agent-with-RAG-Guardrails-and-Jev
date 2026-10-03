@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-089",
+    "title": "Center information",
+    "category": "general",
+    "department": "Offline Centers & Hybrid Learning",
+    "scenario": "A student asks for current information about an offline center.",
+    "keywords": "center, information",
+    "content": "For A student asks for current information about an offline center., identify the relevant city or center, program, batch, date, and enrollment. Offline and hybrid services can have center-specific schedules, faculty assignments, tests, attendance, and access rules. Use the current approved center directory or internal operational record rather than guessing a location or timetable. Attendance disputes should be checked against the center's record. Center transfers require verification of eligibility and availability. Hybrid issues should be separated into online entitlement and offline attendance or scheduling components. Do not promise a seat, transfer, faculty assignment, or schedule change without confirmation."
+  },
+  {
+    "id": "kb-090",
+    "title": "Offline schedule",
+    "category": "general",
+    "department": "Offline Centers & Hybrid Learning",
+    "scenario": "A student asks for the timetable of an offline batch.",
+    "keywords": "offline, schedule",
+    "content": "For A student asks for the timetable of an offline batch., identify the relevant city or center, program, batch, date, and enrollment. Offline and hybrid services can have center-specific schedules, faculty assignments, tests, attendance, and access rules. Use the current approved center directory or internal operational record rather than guessing a location or timetable. Attendance disputes should be checked against the center's record. Center transfers require verification of eligibility and availability. Hybrid issues should be separated into online entitlement and offline attendance or scheduling components. Do not promise a seat, transfer, faculty assignment, or schedule change without confirmation."
+  },
+  {
+    "id": "kb-091",
+    "title": "Offline attendance",
+    "category": "general",
+    "department": "Offline Centers & Hybrid Learning",
+    "scenario": "A student's attendance record appears incorrect.",
+    "keywords": "offline, attendance",
+    "content": "For A student's attendance record appears incorrect., identify the relevant city or center, program, batch, date, and enrollment. Offline and hybrid services can have center-specific schedules, faculty assignments, tests, attendance, and access rules. Use the current approved center directory or internal operational record rather than guessing a location or timetable. Attendance disputes should be checked against the center's record. Center transfers require verification of eligibility and availability. Hybrid issues should be separated into online entitlement and offline attendance or scheduling components. Do not promise a seat, transfer, faculty assignment, or schedule change without confirmation."
+  },
+  {
+    "id": "kb-092",
+    "title": "Center transfer",
+    "category": "general",
+    "department": "Offline Centers & Hybrid Learning",
+    "scenario": "A student requests transfer between offline centers.",
+    "keywords": "center, transfer",
+    "content": "For A student requests transfer between offline centers., identify the relevant city or center, program, batch, date, and enrollment. Offline and hybrid services can have center-specific schedules, faculty assignments, tests, attendance, and access rules. Use the current approved center directory or internal operational record rather than guessing a location or timetable. Attendance disputes should be checked against the center's record. Center transfers require verification of eligibility and availability. Hybrid issues should be separated into online entitlement and offline attendance or scheduling components. Do not promise a seat, transfer, faculty assignment, or schedule change without confirmation."
+  },
+  {
+    "id": "kb-093",
+    "title": "Offline test",
+    "category": "general",
+    "department": "Offline Centers & Hybrid Learning",
+    "scenario": "A student asks about an offline test or test-series session.",
+    "keywords": "offline, test",
+    "content": "For A student asks about an offline test or test-series session., identify the relevant city or center, program, batch, date, and enrollment. Offline and hybrid services can have center-specific schedules, faculty assignments, tests, attendance, and access rules. Use the current approved center directory or internal operational record rather than guessing a location or timetable. Attendance disputes should be checked against the center's record. Center transfers require verification of eligibility and availability. Hybrid issues should be separated into online entitlement and offline attendance or scheduling components. Do not promise a seat, transfer, faculty assignment, or schedule change without confirmation."
+  },
+  {
+    "id": "kb-094",
+    "title": "Center faculty query",
+    "category": "general",
+    "department": "Offline Centers & Hybrid Learning",
+    "scenario": "A student asks which faculty is assigned to a center or batch.",
+    "keywords": "center, faculty, query",
+    "content": "For A student asks which faculty is assigned to a center or batch., identify the relevant city or center, program, batch, date, and enrollment. Offline and hybrid services can have center-specific schedules, faculty assignments, tests, attendance, and access rules. Use the current approved center directory or internal operational record rather than guessing a location or timetable. Attendance disputes should be checked against the center's record. Center transfers require verification of eligibility and availability. Hybrid issues should be separated into online entitlement and offline attendance or scheduling components. Do not promise a seat, transfer, faculty assignment, or schedule change without confirmation."
+  },
+  {
+    "id": "kb-095",
+    "title": "Student dashboard",
+    "category": "general",
+    "department": "Offline Centers & Hybrid Learning",
+    "scenario": "A student asks how offline progress appears in the app.",
+    "keywords": "student, dashboard",
+    "content": "For A student asks how offline progress appears in the app., identify the relevant city or center, program, batch, date, and enrollment. Offline and hybrid services can have center-specific schedules, faculty assignments, tests, attendance, and access rules. Use the current approved center directory or internal operational record rather than guessing a location or timetable. Attendance disputes should be checked against the center's record. Center transfers require verification of eligibility and availability. Hybrid issues should be separated into online entitlement and offline attendance or scheduling components. Do not promise a seat, transfer, faculty assignment, or schedule change without confirmation."
+  },
+  {
+    "id": "kb-096",
+    "title": "Hybrid class issue",
+    "category": "general",
+    "department": "Offline Centers & Hybrid Learning",
+    "scenario": "A student reports a problem involving both offline and online learning access.",
+    "keywords": "hybrid, class, issue",
+    "content": "For A student reports a problem involving both offline and online learning access., identify the relevant city or center, program, batch, date, and enrollment. Offline and hybrid services can have center-specific schedules, faculty assignments, tests, attendance, and access rules. Use the current approved center directory or internal operational record rather than guessing a location or timetable. Attendance disputes should be checked against the center's record. Center transfers require verification of eligibility and availability. Hybrid issues should be separated into online entitlement and offline attendance or scheduling components. Do not promise a seat, transfer, faculty assignment, or schedule change without confirmation."
+  }
+]

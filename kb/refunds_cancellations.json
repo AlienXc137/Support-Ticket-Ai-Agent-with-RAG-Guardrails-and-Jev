@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-017",
+    "title": "Refund eligibility",
+    "category": "refund",
+    "department": "Refunds & Cancellations",
+    "scenario": "A student asks whether a course purchase is eligible for refund.",
+    "keywords": "refund, eligibility",
+    "content": "For A student asks whether a course purchase is eligible for refund., first identify the exact product, transaction, purchase state, and applicable refund or cancellation policy. Eligibility must be determined from an approved policy rather than a generic assumption. Access or consumption status may matter, and subscription cancellation may be different from a refund of a previous charge. If a refund is approved, explain processing separately from approval and do not claim settlement until the payment record confirms it. If the required policy is unavailable or the case is outside documented rules, route it for human review. Never invent a refund window, approval, amount, or completion date."
+  },
+  {
+    "id": "kb-018",
+    "title": "Refund request",
+    "category": "refund",
+    "department": "Refunds & Cancellations",
+    "scenario": "A student wants to submit a refund request for a purchased product.",
+    "keywords": "refund, request",
+    "content": "For A student wants to submit a refund request for a purchased product., first identify the exact product, transaction, purchase state, and applicable refund or cancellation policy. Eligibility must be determined from an approved policy rather than a generic assumption. Access or consumption status may matter, and subscription cancellation may be different from a refund of a previous charge. If a refund is approved, explain processing separately from approval and do not claim settlement until the payment record confirms it. If the required policy is unavailable or the case is outside documented rules, route it for human review. Never invent a refund window, approval, amount, or completion date."
+  },
+  {
+    "id": "kb-019",
+    "title": "Refund after content use",
+    "category": "refund",
+    "department": "Refunds & Cancellations",
+    "scenario": "A refund is requested after the student has accessed course content.",
+    "keywords": "refund, after, content, use",
+    "content": "For A refund is requested after the student has accessed course content., first identify the exact product, transaction, purchase state, and applicable refund or cancellation policy. Eligibility must be determined from an approved policy rather than a generic assumption. Access or consumption status may matter, and subscription cancellation may be different from a refund of a previous charge. If a refund is approved, explain processing separately from approval and do not claim settlement until the payment record confirms it. If the required policy is unavailable or the case is outside documented rules, route it for human review. Never invent a refund window, approval, amount, or completion date."
+  },
+  {
+    "id": "kb-020",
+    "title": "Refund approved but not received",
+    "category": "refund",
+    "department": "Refunds & Cancellations",
+    "scenario": "A refund was approved but funds have not appeared yet.",
+    "keywords": "refund, approved, but, not, received",
+    "content": "For A refund was approved but funds have not appeared yet., first identify the exact product, transaction, purchase state, and applicable refund or cancellation policy. Eligibility must be determined from an approved policy rather than a generic assumption. Access or consumption status may matter, and subscription cancellation may be different from a refund of a previous charge. If a refund is approved, explain processing separately from approval and do not claim settlement until the payment record confirms it. If the required policy is unavailable or the case is outside documented rules, route it for human review. Never invent a refund window, approval, amount, or completion date."
+  },
+  {
+    "id": "kb-021",
+    "title": "Partial refund request",
+    "category": "refund",
+    "department": "Refunds & Cancellations",
+    "scenario": "A student asks for only part of a purchase to be refunded.",
+    "keywords": "partial, refund, request",
+    "content": "For A student asks for only part of a purchase to be refunded., first identify the exact product, transaction, purchase state, and applicable refund or cancellation policy. Eligibility must be determined from an approved policy rather than a generic assumption. Access or consumption status may matter, and subscription cancellation may be different from a refund of a previous charge. If a refund is approved, explain processing separately from approval and do not claim settlement until the payment record confirms it. If the required policy is unavailable or the case is outside documented rules, route it for human review. Never invent a refund window, approval, amount, or completion date."
+  },
+  {
+    "id": "kb-022",
+    "title": "Subscription cancellation",
+    "category": "refund",
+    "department": "Refunds & Cancellations",
+    "scenario": "A student wants to stop a recurring subscription.",
+    "keywords": "subscription, cancellation",
+    "content": "For A student wants to stop a recurring subscription., first identify the exact product, transaction, purchase state, and applicable refund or cancellation policy. Eligibility must be determined from an approved policy rather than a generic assumption. Access or consumption status may matter, and subscription cancellation may be different from a refund of a previous charge. If a refund is approved, explain processing separately from approval and do not claim settlement until the payment record confirms it. If the required policy is unavailable or the case is outside documented rules, route it for human review. Never invent a refund window, approval, amount, or completion date."
+  },
+  {
+    "id": "kb-023",
+    "title": "Billing dispute after cancellation",
+    "category": "refund",
+    "department": "Refunds & Cancellations",
+    "scenario": "A student reports a charge after attempting to cancel a subscription.",
+    "keywords": "billing, dispute, after, cancellation",
+    "content": "For A student reports a charge after attempting to cancel a subscription., first identify the exact product, transaction, purchase state, and applicable refund or cancellation policy. Eligibility must be determined from an approved policy rather than a generic assumption. Access or consumption status may matter, and subscription cancellation may be different from a refund of a previous charge. If a refund is approved, explain processing separately from approval and do not claim settlement until the payment record confirms it. If the required policy is unavailable or the case is outside documented rules, route it for human review. Never invent a refund window, approval, amount, or completion date."
+  },
+  {
+    "id": "kb-024",
+    "title": "Refund escalation",
+    "category": "refund",
+    "department": "Refunds & Cancellations",
+    "scenario": "A refund appears to have exceeded the documented processing period.",
+    "keywords": "refund, escalation",
+    "content": "For A refund appears to have exceeded the documented processing period., first identify the exact product, transaction, purchase state, and applicable refund or cancellation policy. Eligibility must be determined from an approved policy rather than a generic assumption. Access or consumption status may matter, and subscription cancellation may be different from a refund of a previous charge. If a refund is approved, explain processing separately from approval and do not claim settlement until the payment record confirms it. If the required policy is unavailable or the case is outside documented rules, route it for human review. Never invent a refund window, approval, amount, or completion date."
+  }
+]

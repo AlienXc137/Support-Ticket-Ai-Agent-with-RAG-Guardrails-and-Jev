@@ -1,0 +1,20 @@
+[
+  {
+    "id": "kb-107",
+    "title": "Current Information Rule",
+    "category": "academic",
+    "department": "Knowledge Governance",
+    "scenario": "Time-sensitive information",
+    "keywords": "current,latest,time sensitive",
+    "content": "Schedules, exam dates, results, center availability, promotions, product availability, and other changing information should be answered only from a current approved source. An older KB document may be useful background but must not be presented as current when the request depends on today's status. If freshness cannot be established, route to an approved source or human review."
+  },
+  {
+    "id": "kb-108",
+    "title": "Evidence and Citation Rule",
+    "category": "general",
+    "department": "Knowledge Governance",
+    "scenario": "Grounded support responses",
+    "keywords": "evidence,citation,grounding",
+    "content": "A support response must be constructed only from supplied evidence. Each factual citation must correspond to an evidence source actually used for the response. Similarity alone is not enough: a retrieved document must support the claim. If evidence is insufficient, the response should say that further review is required rather than filling the gap with general assumptions."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-041",
+    "title": "Exam schedule",
+    "category": "academic",
+    "department": "Academic & Examination Support",
+    "scenario": "A student asks for the date or timetable of an examination.",
+    "keywords": "exam, schedule",
+    "content": "For A student asks for the date or timetable of an examination., identify the student's examination category, class or program, subject, course, and relevant session before answering. Academic schedules, syllabi, results, answer keys, and exam rules are version-sensitive. Use the latest approved academic source and never substitute an older schedule or a different examination category. If the internal KB does not contain the requested current information, the workflow may use an approved public source when policy permits it. Disputed questions and answer keys should be routed to academic review when the available evidence does not establish the answer. Do not fabricate dates, marks, eligibility, or official exam decisions."
+  },
+  {
+    "id": "kb-042",
+    "title": "Syllabus coverage",
+    "category": "academic",
+    "department": "Academic & Examination Support",
+    "scenario": "A student asks whether a chapter or topic is included in a course or exam.",
+    "keywords": "syllabus, coverage",
+    "content": "For A student asks whether a chapter or topic is included in a course or exam., identify the student's examination category, class or program, subject, course, and relevant session before answering. Academic schedules, syllabi, results, answer keys, and exam rules are version-sensitive. Use the latest approved academic source and never substitute an older schedule or a different examination category. If the internal KB does not contain the requested current information, the workflow may use an approved public source when policy permits it. Disputed questions and answer keys should be routed to academic review when the available evidence does not establish the answer. Do not fabricate dates, marks, eligibility, or official exam decisions."
+  },
+  {
+    "id": "kb-043",
+    "title": "Chapter missing",
+    "category": "academic",
+    "department": "Academic & Examination Support",
+    "scenario": "A student cannot find a particular chapter or topic.",
+    "keywords": "chapter, missing",
+    "content": "For A student cannot find a particular chapter or topic., identify the student's examination category, class or program, subject, course, and relevant session before answering. Academic schedules, syllabi, results, answer keys, and exam rules are version-sensitive. Use the latest approved academic source and never substitute an older schedule or a different examination category. If the internal KB does not contain the requested current information, the workflow may use an approved public source when policy permits it. Disputed questions and answer keys should be routed to academic review when the available evidence does not establish the answer. Do not fabricate dates, marks, eligibility, or official exam decisions."
+  },
+  {
+    "id": "kb-044",
+    "title": "Answer key dispute",
+    "category": "academic",
+    "department": "Academic & Examination Support",
+    "scenario": "A student believes an answer key contains an incorrect answer.",
+    "keywords": "answer, key, dispute",
+    "content": "For A student believes an answer key contains an incorrect answer., identify the student's examination category, class or program, subject, course, and relevant session before answering. Academic schedules, syllabi, results, answer keys, and exam rules are version-sensitive. Use the latest approved academic source and never substitute an older schedule or a different examination category. If the internal KB does not contain the requested current information, the workflow may use an approved public source when policy permits it. Disputed questions and answer keys should be routed to academic review when the available evidence does not establish the answer. Do not fabricate dates, marks, eligibility, or official exam decisions."
+  },
+  {
+    "id": "kb-045",
+    "title": "Test result pending",
+    "category": "academic",
+    "department": "Academic & Examination Support",
+    "scenario": "A submitted test does not yet show a result.",
+    "keywords": "test, result, pending",
+    "content": "For A submitted test does not yet show a result., identify the student's examination category, class or program, subject, course, and relevant session before answering. Academic schedules, syllabi, results, answer keys, and exam rules are version-sensitive. Use the latest approved academic source and never substitute an older schedule or a different examination category. If the internal KB does not contain the requested current information, the workflow may use an approved public source when policy permits it. Disputed questions and answer keys should be routed to academic review when the available evidence does not establish the answer. Do not fabricate dates, marks, eligibility, or official exam decisions."
+  },
+  {
+    "id": "kb-046",
+    "title": "Study material mismatch",
+    "category": "academic",
+    "department": "Academic & Examination Support",
+    "scenario": "A note, DPP, or module appears inconsistent with the course.",
+    "keywords": "study, material, mismatch",
+    "content": "For A note, DPP, or module appears inconsistent with the course., identify the student's examination category, class or program, subject, course, and relevant session before answering. Academic schedules, syllabi, results, answer keys, and exam rules are version-sensitive. Use the latest approved academic source and never substitute an older schedule or a different examination category. If the internal KB does not contain the requested current information, the workflow may use an approved public source when policy permits it. Disputed questions and answer keys should be routed to academic review when the available evidence does not establish the answer. Do not fabricate dates, marks, eligibility, or official exam decisions."
+  },
+  {
+    "id": "kb-047",
+    "title": "Exam result information",
+    "category": "academic",
+    "department": "Academic & Examination Support",
+    "scenario": "A student asks when or where an examination result is available.",
+    "keywords": "exam, result, information",
+    "content": "For A student asks when or where an examination result is available., identify the student's examination category, class or program, subject, course, and relevant session before answering. Academic schedules, syllabi, results, answer keys, and exam rules are version-sensitive. Use the latest approved academic source and never substitute an older schedule or a different examination category. If the internal KB does not contain the requested current information, the workflow may use an approved public source when policy permits it. Disputed questions and answer keys should be routed to academic review when the available evidence does not establish the answer. Do not fabricate dates, marks, eligibility, or official exam decisions."
+  },
+  {
+    "id": "kb-048",
+    "title": "Previous-year paper",
+    "category": "academic",
+    "department": "Academic & Examination Support",
+    "scenario": "A student requests previous-year papers or exam practice material.",
+    "keywords": "previous-year, paper",
+    "content": "For A student requests previous-year papers or exam practice material., identify the student's examination category, class or program, subject, course, and relevant session before answering. Academic schedules, syllabi, results, answer keys, and exam rules are version-sensitive. Use the latest approved academic source and never substitute an older schedule or a different examination category. If the internal KB does not contain the requested current information, the workflow may use an approved public source when policy permits it. Disputed questions and answer keys should be routed to academic review when the available evidence does not establish the answer. Do not fabricate dates, marks, eligibility, or official exam decisions."
+  }
+]

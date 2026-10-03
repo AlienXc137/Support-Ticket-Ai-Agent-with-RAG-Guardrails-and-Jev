@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-065",
+    "title": "Book delivery",
+    "category": "general",
+    "department": "Orders, Notifications & Support Operations",
+    "scenario": "A student asks about delivery of physical study material.",
+    "keywords": "book, delivery",
+    "content": "For A student asks about delivery of physical study material., identify the operational object involved: order, shipment, notification, community post, or support case. Use the authoritative order or support record rather than relying solely on a screenshot or customer assumption. For physical materials, distinguish processing, dispatch, transit, and delivery. For notifications, distinguish notification delivery from the actual class or test schedule. Community moderation and complaints require the appropriate operational workflow. Do not expose internal moderation information or promise an outcome before review. Preserve the sanitized case context so a human reviewer does not require the student to repeat information already provided."
+  },
+  {
+    "id": "kb-066",
+    "title": "Damaged book",
+    "category": "general",
+    "department": "Orders, Notifications & Support Operations",
+    "scenario": "A student received damaged physical study material.",
+    "keywords": "damaged, book",
+    "content": "For A student received damaged physical study material., identify the operational object involved: order, shipment, notification, community post, or support case. Use the authoritative order or support record rather than relying solely on a screenshot or customer assumption. For physical materials, distinguish processing, dispatch, transit, and delivery. For notifications, distinguish notification delivery from the actual class or test schedule. Community moderation and complaints require the appropriate operational workflow. Do not expose internal moderation information or promise an outcome before review. Preserve the sanitized case context so a human reviewer does not require the student to repeat information already provided."
+  },
+  {
+    "id": "kb-067",
+    "title": "Wrong item",
+    "category": "general",
+    "department": "Orders, Notifications & Support Operations",
+    "scenario": "A student received an item different from the order.",
+    "keywords": "wrong, item",
+    "content": "For A student received an item different from the order., identify the operational object involved: order, shipment, notification, community post, or support case. Use the authoritative order or support record rather than relying solely on a screenshot or customer assumption. For physical materials, distinguish processing, dispatch, transit, and delivery. For notifications, distinguish notification delivery from the actual class or test schedule. Community moderation and complaints require the appropriate operational workflow. Do not expose internal moderation information or promise an outcome before review. Preserve the sanitized case context so a human reviewer does not require the student to repeat information already provided."
+  },
+  {
+    "id": "kb-068",
+    "title": "Missing item",
+    "category": "general",
+    "department": "Orders, Notifications & Support Operations",
+    "scenario": "Part of a multi-item order is missing.",
+    "keywords": "missing, item",
+    "content": "For Part of a multi-item order is missing., identify the operational object involved: order, shipment, notification, community post, or support case. Use the authoritative order or support record rather than relying solely on a screenshot or customer assumption. For physical materials, distinguish processing, dispatch, transit, and delivery. For notifications, distinguish notification delivery from the actual class or test schedule. Community moderation and complaints require the appropriate operational workflow. Do not expose internal moderation information or promise an outcome before review. Preserve the sanitized case context so a human reviewer does not require the student to repeat information already provided."
+  },
+  {
+    "id": "kb-069",
+    "title": "Missing notification",
+    "category": "general",
+    "department": "Orders, Notifications & Support Operations",
+    "scenario": "A class or test notification was not received.",
+    "keywords": "missing, notification",
+    "content": "For A class or test notification was not received., identify the operational object involved: order, shipment, notification, community post, or support case. Use the authoritative order or support record rather than relying solely on a screenshot or customer assumption. For physical materials, distinguish processing, dispatch, transit, and delivery. For notifications, distinguish notification delivery from the actual class or test schedule. Community moderation and complaints require the appropriate operational workflow. Do not expose internal moderation information or promise an outcome before review. Preserve the sanitized case context so a human reviewer does not require the student to repeat information already provided."
+  },
+  {
+    "id": "kb-070",
+    "title": "Too many notifications",
+    "category": "general",
+    "department": "Orders, Notifications & Support Operations",
+    "scenario": "A student wants to reduce non-essential notifications.",
+    "keywords": "too, many, notifications",
+    "content": "For A student wants to reduce non-essential notifications., identify the operational object involved: order, shipment, notification, community post, or support case. Use the authoritative order or support record rather than relying solely on a screenshot or customer assumption. For physical materials, distinguish processing, dispatch, transit, and delivery. For notifications, distinguish notification delivery from the actual class or test schedule. Community moderation and complaints require the appropriate operational workflow. Do not expose internal moderation information or promise an outcome before review. Preserve the sanitized case context so a human reviewer does not require the student to repeat information already provided."
+  },
+  {
+    "id": "kb-071",
+    "title": "Community moderation",
+    "category": "general",
+    "department": "Orders, Notifications & Support Operations",
+    "scenario": "A student asks why a community post was removed.",
+    "keywords": "community, moderation",
+    "content": "For A student asks why a community post was removed., identify the operational object involved: order, shipment, notification, community post, or support case. Use the authoritative order or support record rather than relying solely on a screenshot or customer assumption. For physical materials, distinguish processing, dispatch, transit, and delivery. For notifications, distinguish notification delivery from the actual class or test schedule. Community moderation and complaints require the appropriate operational workflow. Do not expose internal moderation information or promise an outcome before review. Preserve the sanitized case context so a human reviewer does not require the student to repeat information already provided."
+  },
+  {
+    "id": "kb-072",
+    "title": "Complaint escalation",
+    "category": "general",
+    "department": "Orders, Notifications & Support Operations",
+    "scenario": "A student wants the issue reviewed by a human support team.",
+    "keywords": "complaint, escalation",
+    "content": "For A student wants the issue reviewed by a human support team., identify the operational object involved: order, shipment, notification, community post, or support case. Use the authoritative order or support record rather than relying solely on a screenshot or customer assumption. For physical materials, distinguish processing, dispatch, transit, and delivery. For notifications, distinguish notification delivery from the actual class or test schedule. Community moderation and complaints require the appropriate operational workflow. Do not expose internal moderation information or promise an outcome before review. Preserve the sanitized case context so a human reviewer does not require the student to repeat information already provided."
+  }
+]

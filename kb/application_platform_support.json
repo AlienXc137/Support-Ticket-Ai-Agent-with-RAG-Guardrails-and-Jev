@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-033",
+    "title": "Video buffering",
+    "category": "technical",
+    "department": "Application & Platform Support",
+    "scenario": "A lecture video repeatedly buffers during playback.",
+    "keywords": "video, buffering",
+    "content": "For A lecture video repeatedly buffers during playback., first determine whether the failure is account-specific, resource-specific, device-specific, network-specific, or platform-wide. Collect the exact feature, course or test, device model, operating-system version, application or browser version, error text, and reproduction steps. Safe first-line troubleshooting may include restarting the app or device, checking connectivity, updating to a supported version, signing in again, and trying another supported environment. Do not claim a platform outage without an approved incident signal. Do not instruct users to install unofficial software or disclose internal infrastructure details. Persistent reproducible failures should be escalated with diagnostic context."
+  },
+  {
+    "id": "kb-034",
+    "title": "Video not playing",
+    "category": "technical",
+    "department": "Application & Platform Support",
+    "scenario": "A lecture video does not start or returns a playback error.",
+    "keywords": "video, not, playing",
+    "content": "For A lecture video does not start or returns a playback error., first determine whether the failure is account-specific, resource-specific, device-specific, network-specific, or platform-wide. Collect the exact feature, course or test, device model, operating-system version, application or browser version, error text, and reproduction steps. Safe first-line troubleshooting may include restarting the app or device, checking connectivity, updating to a supported version, signing in again, and trying another supported environment. Do not claim a platform outage without an approved incident signal. Do not instruct users to install unofficial software or disclose internal infrastructure details. Persistent reproducible failures should be escalated with diagnostic context."
+  },
+  {
+    "id": "kb-035",
+    "title": "Download stuck",
+    "category": "technical",
+    "department": "Application & Platform Support",
+    "scenario": "An offline lecture download remains stuck or incomplete.",
+    "keywords": "download, stuck",
+    "content": "For An offline lecture download remains stuck or incomplete., first determine whether the failure is account-specific, resource-specific, device-specific, network-specific, or platform-wide. Collect the exact feature, course or test, device model, operating-system version, application or browser version, error text, and reproduction steps. Safe first-line troubleshooting may include restarting the app or device, checking connectivity, updating to a supported version, signing in again, and trying another supported environment. Do not claim a platform outage without an approved incident signal. Do not instruct users to install unofficial software or disclose internal infrastructure details. Persistent reproducible failures should be escalated with diagnostic context."
+  },
+  {
+    "id": "kb-036",
+    "title": "Downloaded content unavailable",
+    "category": "technical",
+    "department": "Application & Platform Support",
+    "scenario": "Previously downloaded content cannot be opened.",
+    "keywords": "downloaded, content, unavailable",
+    "content": "For Previously downloaded content cannot be opened., first determine whether the failure is account-specific, resource-specific, device-specific, network-specific, or platform-wide. Collect the exact feature, course or test, device model, operating-system version, application or browser version, error text, and reproduction steps. Safe first-line troubleshooting may include restarting the app or device, checking connectivity, updating to a supported version, signing in again, and trying another supported environment. Do not claim a platform outage without an approved incident signal. Do not instruct users to install unofficial software or disclose internal infrastructure details. Persistent reproducible failures should be escalated with diagnostic context."
+  },
+  {
+    "id": "kb-037",
+    "title": "App crash",
+    "category": "technical",
+    "department": "Application & Platform Support",
+    "scenario": "The mobile application closes unexpectedly during use.",
+    "keywords": "app, crash",
+    "content": "For The mobile application closes unexpectedly during use., first determine whether the failure is account-specific, resource-specific, device-specific, network-specific, or platform-wide. Collect the exact feature, course or test, device model, operating-system version, application or browser version, error text, and reproduction steps. Safe first-line troubleshooting may include restarting the app or device, checking connectivity, updating to a supported version, signing in again, and trying another supported environment. Do not claim a platform outage without an approved incident signal. Do not instruct users to install unofficial software or disclose internal infrastructure details. Persistent reproducible failures should be escalated with diagnostic context."
+  },
+  {
+    "id": "kb-038",
+    "title": "Live class disconnects",
+    "category": "technical",
+    "department": "Application & Platform Support",
+    "scenario": "A live stream repeatedly disconnects during class.",
+    "keywords": "live, class, disconnects",
+    "content": "For A live stream repeatedly disconnects during class., first determine whether the failure is account-specific, resource-specific, device-specific, network-specific, or platform-wide. Collect the exact feature, course or test, device model, operating-system version, application or browser version, error text, and reproduction steps. Safe first-line troubleshooting may include restarting the app or device, checking connectivity, updating to a supported version, signing in again, and trying another supported environment. Do not claim a platform outage without an approved incident signal. Do not instruct users to install unofficial software or disclose internal infrastructure details. Persistent reproducible failures should be escalated with diagnostic context."
+  },
+  {
+    "id": "kb-039",
+    "title": "Audio problem",
+    "category": "technical",
+    "department": "Application & Platform Support",
+    "scenario": "A student cannot hear audio even though the class is visible.",
+    "keywords": "audio, problem",
+    "content": "For A student cannot hear audio even though the class is visible., first determine whether the failure is account-specific, resource-specific, device-specific, network-specific, or platform-wide. Collect the exact feature, course or test, device model, operating-system version, application or browser version, error text, and reproduction steps. Safe first-line troubleshooting may include restarting the app or device, checking connectivity, updating to a supported version, signing in again, and trying another supported environment. Do not claim a platform outage without an approved incident signal. Do not instruct users to install unofficial software or disclose internal infrastructure details. Persistent reproducible failures should be escalated with diagnostic context."
+  },
+  {
+    "id": "kb-040",
+    "title": "Browser compatibility",
+    "category": "technical",
+    "department": "Application & Platform Support",
+    "scenario": "A web feature works inconsistently in a particular browser.",
+    "keywords": "browser, compatibility",
+    "content": "For A web feature works inconsistently in a particular browser., first determine whether the failure is account-specific, resource-specific, device-specific, network-specific, or platform-wide. Collect the exact feature, course or test, device model, operating-system version, application or browser version, error text, and reproduction steps. Safe first-line troubleshooting may include restarting the app or device, checking connectivity, updating to a supported version, signing in again, and trying another supported environment. Do not claim a platform outage without an approved incident signal. Do not instruct users to install unofficial software or disclose internal infrastructure details. Persistent reproducible failures should be escalated with diagnostic context."
+  }
+]

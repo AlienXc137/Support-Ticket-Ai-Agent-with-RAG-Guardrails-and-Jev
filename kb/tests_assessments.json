@@ -1,0 +1,74 @@
+[
+  {
+    "id": "kb-081",
+    "title": "Test not visible",
+    "category": "general",
+    "department": "Tests & Assessments",
+    "scenario": "An expected test is not visible in the course.",
+    "keywords": "test, not, visible",
+    "content": "For An expected test is not visible in the course., first identify the assessment, course, batch, attempt, and exact failure state. Assessment problems can affect scores and attempts, so avoid telling the student to retry when the platform may have already recorded the attempt. Verify submission, timer, result, and attempt status using the authoritative system. Test schedules and availability may be batch-specific. Disputed questions should be routed to academic review. Do not invent scores, rankings, timer adjustments, or attempt outcomes. If the state cannot be verified, escalate with the assessment identifier and observed behavior."
+  },
+  {
+    "id": "kb-082",
+    "title": "Submission failed",
+    "category": "general",
+    "department": "Tests & Assessments",
+    "scenario": "A student cannot submit an assessment attempt.",
+    "keywords": "submission, failed",
+    "content": "For A student cannot submit an assessment attempt., first identify the assessment, course, batch, attempt, and exact failure state. Assessment problems can affect scores and attempts, so avoid telling the student to retry when the platform may have already recorded the attempt. Verify submission, timer, result, and attempt status using the authoritative system. Test schedules and availability may be batch-specific. Disputed questions should be routed to academic review. Do not invent scores, rankings, timer adjustments, or attempt outcomes. If the state cannot be verified, escalate with the assessment identifier and observed behavior."
+  },
+  {
+    "id": "kb-083",
+    "title": "Timer issue",
+    "category": "general",
+    "department": "Tests & Assessments",
+    "scenario": "A test timer behaves unexpectedly.",
+    "keywords": "timer, issue",
+    "content": "For A test timer behaves unexpectedly., first identify the assessment, course, batch, attempt, and exact failure state. Assessment problems can affect scores and attempts, so avoid telling the student to retry when the platform may have already recorded the attempt. Verify submission, timer, result, and attempt status using the authoritative system. Test schedules and availability may be batch-specific. Disputed questions should be routed to academic review. Do not invent scores, rankings, timer adjustments, or attempt outcomes. If the state cannot be verified, escalate with the assessment identifier and observed behavior."
+  },
+  {
+    "id": "kb-084",
+    "title": "Leaderboard not updated",
+    "category": "general",
+    "department": "Tests & Assessments",
+    "scenario": "A rank or leaderboard result has not refreshed.",
+    "keywords": "leaderboard, not, updated",
+    "content": "For A rank or leaderboard result has not refreshed., first identify the assessment, course, batch, attempt, and exact failure state. Assessment problems can affect scores and attempts, so avoid telling the student to retry when the platform may have already recorded the attempt. Verify submission, timer, result, and attempt status using the authoritative system. Test schedules and availability may be batch-specific. Disputed questions should be routed to academic review. Do not invent scores, rankings, timer adjustments, or attempt outcomes. If the state cannot be verified, escalate with the assessment identifier and observed behavior."
+  },
+  {
+    "id": "kb-085",
+    "title": "Analytics unavailable",
+    "category": "general",
+    "department": "Tests & Assessments",
+    "scenario": "Test performance analytics are missing.",
+    "keywords": "analytics, unavailable",
+    "content": "For Test performance analytics are missing., first identify the assessment, course, batch, attempt, and exact failure state. Assessment problems can affect scores and attempts, so avoid telling the student to retry when the platform may have already recorded the attempt. Verify submission, timer, result, and attempt status using the authoritative system. Test schedules and availability may be batch-specific. Disputed questions should be routed to academic review. Do not invent scores, rankings, timer adjustments, or attempt outcomes. If the state cannot be verified, escalate with the assessment identifier and observed behavior."
+  },
+  {
+    "id": "kb-086",
+    "title": "DPP unavailable",
+    "category": "general",
+    "department": "Tests & Assessments",
+    "scenario": "A daily practice assignment is missing.",
+    "keywords": "dpp, unavailable",
+    "content": "For A daily practice assignment is missing., first identify the assessment, course, batch, attempt, and exact failure state. Assessment problems can affect scores and attempts, so avoid telling the student to retry when the platform may have already recorded the attempt. Verify submission, timer, result, and attempt status using the authoritative system. Test schedules and availability may be batch-specific. Disputed questions should be routed to academic review. Do not invent scores, rankings, timer adjustments, or attempt outcomes. If the state cannot be verified, escalate with the assessment identifier and observed behavior."
+  },
+  {
+    "id": "kb-087",
+    "title": "Question ambiguous",
+    "category": "general",
+    "department": "Tests & Assessments",
+    "scenario": "A student reports that a test question is unclear or ambiguous.",
+    "keywords": "question, ambiguous",
+    "content": "For A student reports that a test question is unclear or ambiguous., first identify the assessment, course, batch, attempt, and exact failure state. Assessment problems can affect scores and attempts, so avoid telling the student to retry when the platform may have already recorded the attempt. Verify submission, timer, result, and attempt status using the authoritative system. Test schedules and availability may be batch-specific. Disputed questions should be routed to academic review. Do not invent scores, rankings, timer adjustments, or attempt outcomes. If the state cannot be verified, escalate with the assessment identifier and observed behavior."
+  },
+  {
+    "id": "kb-088",
+    "title": "Attempt status uncertain",
+    "category": "general",
+    "department": "Tests & Assessments",
+    "scenario": "The student is unsure whether an interrupted attempt was recorded.",
+    "keywords": "attempt, status, uncertain",
+    "content": "For The student is unsure whether an interrupted attempt was recorded., first identify the assessment, course, batch, attempt, and exact failure state. Assessment problems can affect scores and attempts, so avoid telling the student to retry when the platform may have already recorded the attempt. Verify submission, timer, result, and attempt status using the authoritative system. Test schedules and availability may be batch-specific. Disputed questions should be routed to academic review. Do not invent scores, rankings, timer adjustments, or attempt outcomes. If the state cannot be verified, escalate with the assessment identifier and observed behavior."
+  }
+]
