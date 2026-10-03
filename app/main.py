@@ -1,11 +1,17 @@
 from pathlib import Path
+from typing import Literal
 from uuid import uuid4
-from fastapi import FastAPI, HTTPException
+
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
-from typing import Literal
 
+from app.database import (
+    SQLiteTicketStore,
+    TicketAlreadyExistsError,
+    TicketNotFoundError,
+)
 from graph.graph import build_graph
 from human_review.human_review import resolve_human_review
 
@@ -33,7 +39,7 @@ app.mount(
 
 workflow = build_graph()
 
-ticket_store: dict[str, dict] = {}
+ticket_store = SQLiteTicketStore()
 
 
 class TicketCreateRequest(BaseModel):
@@ -43,21 +49,31 @@ class TicketCreateRequest(BaseModel):
 
 
 class HumanReviewRequest(BaseModel):
-    action: Literal["approve", "reject", "edit"]
+    action: Literal[
+        "approve",
+        "reject",
+        "edit",
+    ]
     reviewer_note: str = ""
     edited_response: str = ""
 
 
-def _get_ticket_or_404(ticket_id: str) -> dict:
-    state = ticket_store.get(ticket_id)
-
-    if state is None:
-        raise HTTPException(
-            status_code=404,
-            detail=f"Ticket '{ticket_id}' was not found.",
+def _get_ticket_or_404(
+    ticket_id: str,
+) -> dict:
+    try:
+        return ticket_store.get(
+            ticket_id
         )
 
-    return state
+    except TicketNotFoundError as exc:
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                f"Ticket '{ticket_id}' "
+                "was not found."
+            ),
+        ) from exc
 
 
 @app.get(
@@ -76,6 +92,7 @@ def health():
     return {
         "status": "ok",
         "service": "support-ticket-agent",
+        "persistence": "sqlite",
     }
 
 
@@ -89,12 +106,6 @@ def create_ticket(
         else f"TKT-{uuid4().hex[:8].upper()}"
     )
 
-    if ticket_id in ticket_store:
-        raise HTTPException(
-            status_code=409,
-            detail=f"Ticket '{ticket_id}' already exists.",
-        )
-
     initial_state = {
         "ticket_id": ticket_id,
         "raw_message": request.message,
@@ -102,14 +113,28 @@ def create_ticket(
     }
 
     try:
-        result = workflow.invoke(initial_state)
+        result = workflow.invoke(
+            initial_state
+        )
+
+        ticket_store.create(
+            dict(result)
+        )
+
+    except TicketAlreadyExistsError as exc:
+        raise HTTPException(
+            status_code=409,
+            detail=str(exc),
+        ) from exc
+
     except Exception as exc:
         raise HTTPException(
             status_code=500,
-            detail=f"Workflow execution failed: {exc}",
+            detail=(
+                "Workflow execution failed: "
+                f"{exc}"
+            ),
         ) from exc
-
-    ticket_store[ticket_id] = dict(result)
 
     return {
         "ticket_id": ticket_id,
@@ -117,20 +142,64 @@ def create_ticket(
     }
 
 
-@app.get("/api/tickets/{ticket_id}")
-def get_ticket(ticket_id: str):
+@app.get("/api/tickets")
+def list_tickets(
+    limit: int = Query(
+        default=50,
+        ge=1,
+        le=100,
+    ),
+    offset: int = Query(
+        default=0,
+        ge=0,
+    ),
+    decision: str | None = Query(
+        default=None,
+    ),
+):
+    try:
+        tickets = ticket_store.list_summaries(
+            limit=limit,
+            offset=offset,
+            decision=decision,
+        )
+
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=400,
+            detail=str(exc),
+        ) from exc
+
     return {
-        "ticket_id": ticket_id,
-        "state": _get_ticket_or_404(ticket_id),
+        "tickets": tickets,
+        "count": len(tickets),
+        "limit": limit,
+        "offset": offset,
     }
 
 
-@app.post("/api/tickets/{ticket_id}/review")
+@app.get("/api/tickets/{ticket_id}")
+def get_ticket(
+    ticket_id: str,
+):
+    return {
+        "ticket_id": ticket_id,
+        "state": _get_ticket_or_404(
+            ticket_id
+        ),
+    }
+
+
+@app.post(
+    "/api/tickets/{ticket_id}/review"
+)
 def review_ticket(
     ticket_id: str,
     request: HumanReviewRequest,
 ):
-    state = _get_ticket_or_404(ticket_id)
+    state = _get_ticket_or_404(
+        ticket_id
+    )
 
     try:
         result = resolve_human_review(
@@ -139,13 +208,34 @@ def review_ticket(
             reviewer_note=request.reviewer_note,
             edited_response=request.edited_response,
         )
+
+        ticket_store.update(
+            dict(result)
+        )
+
     except ValueError as exc:
         raise HTTPException(
             status_code=400,
             detail=str(exc),
         ) from exc
 
-    ticket_store[ticket_id] = dict(result)
+    except TicketNotFoundError as exc:
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                f"Ticket '{ticket_id}' "
+                "was not found."
+            ),
+        ) from exc
+
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=(
+                "Human review failed: "
+                f"{exc}"
+            ),
+        ) from exc
 
     return {
         "ticket_id": ticket_id,

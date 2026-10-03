@@ -1,423 +1,120 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="AI operations console for support ticket triage and resolution."
-    />
-    <title>Support AI Operations</title>
-    <link rel="stylesheet" href="/static/styles.css" />
-    <link rel="icon" type="image/svg+xml" href="/static/icon.svg">
-  </head>
-  <body>
-    <div class="app-shell">
-      <header class="topbar">
-        <div class="brand-block">
-          <div class="brand-mark">AI</div>
-          <div>
-            <div class="eyebrow">AI OPERATIONS CONSOLE</div>
-            <h1>Support Ticket Triage</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b12" />
+  <meta name="description" content="Support AI control plane for ticket triage, retrieval, verification and human review." />
+  <title>Support AI · Control Plane</title>
+  <link rel="icon" href="/static/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-symbol"><span></span><span></span><span></span></div>
+        <div>
+          <div class="brand-kicker">AI OPERATIONS</div>
+          <div class="brand-name">Support Control Plane</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div class="system-status"><i></i><span id="runtimeStatus">SYSTEM OPERATIONAL</span></div>
+        <div class="clock" id="clock">--:--</div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="rail">
+        <section class="rail-block composer">
+          <div class="eyebrow-row"><span class="eyebrow">NEW TICKET</span><span class="live">LIVE</span></div>
+          <label class="label" for="ticketMessage">Customer message</label>
+          <textarea id="ticketMessage" class="message-box" placeholder="Describe the customer's issue..."></textarea>
+          <div class="input-row">
+            <select id="ticketChannel" class="select-box" aria-label="Channel">
+              <option value="web">Web</option>
+              <option value="email">Email</option>
+              <option value="chat">Chat</option>
+              <option value="portal">Portal</option>
+            </select>
+            <button id="runButton" class="run-button"><span>Run agent</span><b>↗</b></button>
           </div>
+          <div class="hint">Ctrl / Cmd + Enter to run</div>
+        </section>
+
+        <section class="rail-block">
+          <div class="section-head"><span class="eyebrow">DEMO QUEUE</span><button id="refreshHistoryButton" class="ghost-button">Refresh</button></div>
+          <div id="demoQueue" class="demo-queue"></div>
+        </section>
+
+        <section class="rail-block history-block">
+          <div class="section-head"><span class="eyebrow">PERSISTED HISTORY</span><span id="historyCount" class="count">0</span></div>
+          <div id="historyList" class="history-list"><div class="empty-mini">No stored tickets yet.</div></div>
+        </section>
+      </aside>
+
+      <section class="canvas">
+        <div id="emptyState" class="welcome">
+          <div class="welcome-glow"></div>
+          <div class="welcome-icon"><span></span><span></span><span></span></div>
+          <div class="eyebrow">CONTROL PLANE READY</div>
+          <h1>Turn support tickets into <em>controlled decisions.</em></h1>
+          <p>Run a ticket through sanitization, safety gates, hybrid retrieval, policy-aware web search, grounded drafting, independent verification and deterministic routing.</p>
+          <div class="capability-row">
+            <div><b>01</b><span>PII</span></div><div><b>02</b><span>GUARDRAILS</span></div><div><b>03</b><span>RAG</span></div><div><b>04</b><span>JEV</span></div><div><b>05</b><span>HITL</span></div>
+          </div>
+          <button id="exploreDemoButton" class="outline-button">Explore a demo ticket <span>→</span></button>
         </div>
 
-        <div class="topbar-right">
-          <div class="run-indicator">
-            <span class="status-dot"></span>
-            <span id="runtimeStatus">WORKFLOW ONLINE</span>
-          </div>
-          <span id="topDecision" class="mini-decision">STANDBY</span>
-          <span id="clock" class="clock">--:--:--</span>
-        </div>
-      </header>
-
-      <main class="layout">
-        <aside class="sidebar">
-          <section class="sidebar-section compose-section">
-            <div class="section-heading">
-              <span class="section-label">INCOMING TICKET</span>
-              <span class="live-chip">LIVE INPUT</span>
+        <div id="dashboard" class="hidden">
+          <div class="ticket-header">
+            <div>
+              <div class="eyebrow">TICKET <span id="ticketIdentity">—</span></div>
+              <h1 id="ticketTitle">Support ticket</h1>
+              <p id="ticketMessagePreview">—</p>
             </div>
-
-            <textarea
-              id="ticketMessage"
-              class="ticket-input"
-              placeholder="Enter a customer support ticket..."
-            >
-I cannot access my course recordings.</textarea
-            >
-
-            <button id="runButton" class="primary-button full-width">
-              <span>Run Agent Workflow</span>
-              <span class="button-arrow">↗</span>
-            </button>
-
-            <div class="shortcut-note">
-              <span>CTRL</span>
-              <span>+</span>
-              <span>ENTER</span>
-              <span class="shortcut-label">to run</span>
-            </div>
-          </section>
-
-          <section class="sidebar-section">
-            <div class="section-label">TICKET CONTEXT</div>
-
-            <div class="context-card">
-              <div class="context-row">
-                <span>Ticket ID</span>
-                <strong id="ticketIdentity">—</strong>
-              </div>
-              <div class="context-row">
-                <span>Channel</span>
-                <strong id="ticketChannel">—</strong>
-              </div>
-              <div class="context-row">
-                <span>PII</span>
-                <strong id="sidePii">—</strong>
-              </div>
-            </div>
-          </section>
-
-          <section class="sidebar-section">
-            <div class="section-label">ROUTING STATE</div>
-
-            <div class="side-status-list">
-              <div class="side-status">
-                <span>Decision</span>
-                <strong id="sideDecision">—</strong>
-              </div>
-              <div class="side-status">
-                <span>Review</span>
-                <strong id="sideReview">—</strong>
-              </div>
-              <div class="side-status">
-                <span>Delivery</span>
-                <strong id="sideDelivery">—</strong>
-              </div>
-            </div>
-          </section>
-
-          <section class="sidebar-section sidebar-explainer">
-            <div class="section-label">ARCHITECTURE</div>
-            <p>
-              LangGraph orchestrates the workflow. Specialized components handle
-              PII, safety, retrieval, verification, and routing.
-            </p>
-            <div class="stack-tags">
-              <span>LangGraph</span>
-              <span>Presidio</span>
-              <span>NeMo</span>
-              <span>Hybrid RAG</span>
-              <span>Jev</span>
-            </div>
-          </section>
-        </aside>
-
-        <section class="content">
-          <div id="emptyState" class="empty-state">
-            <div class="empty-grid"></div>
-            <div class="empty-icon">AI</div>
-            <div class="eyebrow">CONTROL PLANE READY</div>
-            <h2>Support resolution workflow standing by</h2>
-            <p>
-              Submit a ticket and watch the executed route appear here: sanitize
-              → guardrails → analyze → retrieve → verify → route.
-            </p>
-            <div class="empty-flow">
-              <span>INPUT</span>
-              <b>→</b>
-              <span>RAG</span>
-              <b>→</b>
-              <span>JEV</span>
-              <b>→</b>
-              <span>DECISION</span>
-            </div>
+            <div id="decisionBadge" class="decision-badge">STANDBY</div>
           </div>
 
-          <div id="dashboard" class="hidden">
-            <section class="hero-row">
-              <div class="hero-copy">
-                <div class="eyebrow">ACTIVE TICKET</div>
-                <div class="hero-title-line">
-                  <h2 id="ticketTitle">—</h2>
-                  <span id="activityPill" class="activity-pill">—</span>
-                </div>
-                <p id="ticketMessagePreview" class="ticket-preview">—</p>
-                <div id="whatHappened" class="what-happened">—</div>
-              </div>
+          <div id="whatHappened" class="insight"></div>
 
-              <div class="hero-decision">
-                <span class="field-label">FINAL ROUTE</span>
-                <div id="decisionBadge" class="decision-badge">—</div>
-                <div id="reasonCodes" class="reason-list compact"></div>
-              </div>
-            </section>
+          <div class="metric-grid">
+            <article class="metric"><span>Category</span><strong id="metricCategory">—</strong><small>Structured analysis</small></article>
+            <article class="metric"><span>Urgency</span><strong id="metricUrgency">—</strong><small>Priority signal</small></article>
+            <article class="metric"><span>KB coverage</span><strong id="metricKb">—</strong><small id="metricKbSub">Evidence gate</small></article>
+            <article class="metric"><span>Verification</span><strong id="metricVerification">—</strong><small id="metricVerificationSub">Jev</small></article>
+          </div>
 
-            <section class="metrics-grid">
-              <article class="metric-card">
-                <span class="metric-label">CATEGORY</span>
-                <strong id="metricCategory">—</strong>
-                <span class="metric-sub">LLM classification</span>
-              </article>
+          <section class="panel route-panel">
+            <div class="panel-head"><div><span class="eyebrow">EXECUTION TRACE</span><h2>How the agent handled it</h2></div><div id="routeBadge" class="route-badge">—</div></div>
+            <div id="workflowTrace" class="trace"></div>
+          </section>
 
-              <article class="metric-card">
-                <span class="metric-label">URGENCY</span>
-                <strong id="metricUrgency">—</strong>
-                <span class="metric-sub">risk-aware triage</span>
-              </article>
-
-              <article class="metric-card">
-                <span class="metric-label">COMPLEXITY</span>
-                <strong id="metricComplexity">—</strong>
-                <span class="metric-sub">ticket analysis</span>
-              </article>
-
-              <article class="metric-card">
-                <span class="metric-label">KB COVERAGE</span>
-                <strong id="metricKb">—</strong>
-                <span id="metricKbSub" class="metric-sub">coverage gate</span>
-              </article>
-            </section>
-
-            <section class="panel workflow-panel">
-              <div class="panel-header workflow-header">
-                <div>
-                  <div class="eyebrow">LANGGRAPH EXECUTION</div>
-                  <h3>Workflow trace</h3>
-                  <p class="panel-subtitle">
-                    Each card explains the control point and shows the branch
-                    taken by this ticket.
-                  </p>
-                </div>
-
-                <div class="trace-legend">
-                  <span>
-                    <i class="legend-dot done"></i>
-                    Executed
-                  </span>
-                  <span>
-                    <i class="legend-dot branch"></i>
-                    Branch
-                  </span>
-                  <span>
-                    <i class="legend-dot pending"></i>
-                    Not used
-                  </span>
-                </div>
-              </div>
-
-              <div id="workflowSummary" class="workflow-summary"></div>
-              <div id="workflowTrace" class="workflow-trace"></div>
-              <div id="workflowPathNote" class="workflow-path-note"></div>
-            </section>
-
-            <section class="split-grid">
-              <section class="panel">
-                <div class="panel-header">
-                  <div>
-                    <div class="eyebrow">TICKET ANALYSIS</div>
-                    <h3>What the agent understood</h3>
-                  </div>
-                  <span id="analysisSignal" class="status-pill">—</span>
-                </div>
-
-                <div class="analysis-grid">
-                  <div class="detail-block">
-                    <span class="field-label">PII DETECTED</span>
-                    <div id="piiDetected" class="tag-list"></div>
-                  </div>
-
-                  <div class="detail-block">
-                    <span class="field-label">RISK FLAGS</span>
-                    <div id="riskFlags" class="tag-list"></div>
-                  </div>
-
-                  <div class="detail-block">
-                    <span class="field-label">ANGER SCORE</span>
-                    <div id="angerScore" class="field-value">—</div>
-                  </div>
-
-                  <div class="detail-block">
-                    <span class="field-label">WEB SOURCE TYPE</span>
-                    <div id="webSource" class="field-value">—</div>
-                  </div>
-
-                  <div class="detail-block">
-                    <span class="field-label">WEB SEARCH</span>
-                    <div id="webUsed" class="field-value">—</div>
-                  </div>
-
-                  <div class="detail-block">
-                    <span class="field-label">RETRY COUNT</span>
-                    <div id="retryCount" class="field-value">—</div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="panel verification-panel">
-                <div class="panel-header">
-                  <div>
-                    <div class="eyebrow">INDEPENDENT VERIFICATION</div>
-                    <h3>Jev response check</h3>
-                  </div>
-                  <div id="verificationStatus" class="status-pill">—</div>
-                </div>
-
-                <div class="verification-grid">
-                  <div class="verification-card">
-                    <div class="verification-top">
-                      <span>Grounding</span>
-                      <strong id="groundingValue">0%</strong>
-                    </div>
-
-                    <div class="progress-track">
-                      <div
-                        id="groundingBar"
-                        class="progress-fill"
-                        style="width: 0%"
-                      ></div>
-                    </div>
-
-                    <span class="verification-note">
-                      Claims supported by supplied evidence
-                    </span>
-                  </div>
-
-                  <div class="verification-card">
-                    <div class="verification-top">
-                      <span>Citation support</span>
-                      <strong id="citationValue">0%</strong>
-                    </div>
-
-                    <div class="progress-track">
-                      <div
-                        id="citationBar"
-                        class="progress-fill"
-                        style="width: 0%"
-                      ></div>
-                    </div>
-
-                    <span class="verification-note">
-                      Citations match available sources
-                    </span>
-                  </div>
-                </div>
-
-                <div class="verification-detail">
-                  <span class="field-label">JEV OUTCOME</span>
-                  <p id="verificationReason">—</p>
-                </div>
-              </section>
-            </section>
-
-            <section class="panel">
-              <div class="panel-header">
-                <div>
-                  <div class="eyebrow">EVIDENCE LAYER</div>
-                  <h3>Sources used to construct the answer</h3>
-                  <p class="panel-subtitle">
-                    The response generator is constrained to the evidence shown
-                    below.
-                  </p>
-                </div>
-
-                <div id="evidenceCount" class="count-badge">0 sources</div>
-              </div>
-
+          <div class="lower-grid">
+            <section class="panel evidence-panel">
+              <div class="panel-head"><div><span class="eyebrow">EVIDENCE</span><h2>What the response is grounded in</h2></div><span id="evidenceCount" class="count">0 sources</span></div>
               <div id="evidenceList" class="evidence-list"></div>
             </section>
 
             <section class="panel response-panel">
-              <div class="panel-header">
-                <div>
-                  <div class="eyebrow">RESPONSE GENERATION</div>
-                  <h3>Drafted support response</h3>
-                </div>
-
-                <div id="citationPills" class="tag-list"></div>
-              </div>
-
-              <div id="draftResponse" class="response-box">—</div>
-            </section>
-
-            <section class="panel review-panel">
-              <div class="panel-header">
-                <div>
-                  <div class="eyebrow">HUMAN-IN-THE-LOOP</div>
-                  <h3 id="reviewTitle">Decision</h3>
-                  <p class="panel-subtitle">
-                    Auto-reply is gated by deterministic routing. Escalated
-                    tickets stop here until a reviewer acts.
-                  </p>
-                </div>
-
-                <div id="deliveryStatus" class="status-pill">—</div>
-              </div>
-
-              <div id="reviewControls" class="review-controls hidden">
-                <div class="review-callout">
-                  <strong>Human approval required.</strong>
-                  <span>
-                    Review the generated response and either approve, edit, or
-                    reject it.
-                  </span>
-                </div>
-
-                <textarea
-                  id="reviewNote"
-                  class="ticket-input"
-                  placeholder="Add a reviewer note..."
-                ></textarea>
-
-                <div class="button-row">
-                  <button id="approveButton" class="success-button">
-                    Approve &amp; Send
-                  </button>
-
-                  <button id="editButton" class="secondary-button">
-                    Edit &amp; Approve
-                  </button>
-
-                  <button id="rejectButton" class="danger-button">
-                    Reject
-                  </button>
-                </div>
-              </div>
-
-              <div id="editBox" class="hidden edit-area">
-                <div class="edit-heading">
-                  <span class="field-label">EDITED RESPONSE</span>
-                  <span> Changes are applied only after confirmation. </span>
-                </div>
-
-                <textarea
-                  id="editedResponse"
-                  class="response-editor"
-                ></textarea>
-
-                <button id="saveEditButton" class="primary-button">
-                  Save Edited Response
-                </button>
-              </div>
-
-              <div id="finalResponseSection" class="hidden final-response">
-                <div class="final-header">
-                  <span class="field-label">FINAL RESPONSE</span>
-                  <span class="final-ready">READY TO SEND</span>
-                </div>
-
-                <div id="finalResponse" class="response-box">—</div>
+              <div class="panel-head"><div><span class="eyebrow">RESPONSE</span><h2>Generated answer</h2></div><span id="responseStatus" class="status-chip">—</span></div>
+              <div id="draftBox" class="draft-box">No response generated.</div>
+              <div id="citationList" class="citation-list"></div>
+              <div id="reviewPanel" class="review-panel hidden">
+                <div class="review-title"><span>Human review required</span><small>Automatic delivery is disabled.</small></div>
+                <textarea id="editedResponse" class="review-editor" placeholder="Edit the response if needed..."></textarea>
+                <textarea id="reviewNote" class="review-note" placeholder="Reviewer note (optional)"></textarea>
+                <div class="review-actions"><button id="approveButton" class="success-button">Approve</button><button id="editButton" class="secondary-button">Save edit</button><button id="rejectButton" class="danger-button">Reject</button></div>
               </div>
             </section>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      <div id="toast" class="toast hidden"></div>
-    </div>
-
-    <script src="/static/app.js"></script>
-  </body>
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
 </html>
