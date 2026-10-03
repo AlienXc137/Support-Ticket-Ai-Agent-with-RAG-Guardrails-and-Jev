@@ -81,9 +81,7 @@ def prepare_retry(
 
 def build_graph():
 
-    graph = StateGraph(
-        TicketState
-    )
+    graph = StateGraph(TicketState)
 
     graph.add_node(
         "sanitize_ticket",

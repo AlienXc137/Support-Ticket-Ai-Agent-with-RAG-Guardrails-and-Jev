@@ -18,9 +18,7 @@ class VercelGateway:
         api_key = os.getenv("AI_GATEWAY_API_KEY")
 
         if not api_key:
-            raise ValueError(
-                "AI_GATEWAY_API_KEY is not set."
-            )
+            raise ValueError("AI_GATEWAY_API_KEY is not set.")
 
         self.api_key = api_key
 
@@ -34,23 +32,11 @@ class VercelGateway:
             temperature=0,
         )
 
-        self.analysis_llm = (
-            self.llm.with_structured_output(
-                TicketAnalysis
-            )
-        )
+        self.analysis_llm = self.llm.with_structured_output(TicketAnalysis)
 
-        self.response_llm = (
-            self.llm.with_structured_output(
-                SupportResponse
-            )
-        )
+        self.response_llm = self.llm.with_structured_output(SupportResponse)
 
-        self.coverage_llm = (
-            self.llm.with_structured_output(
-                KBCoverage
-            )
-        )
+        self.coverage_llm = self.llm.with_structured_output(KBCoverage)
 
     def evaluate_with_jev(
         self,
@@ -60,9 +46,7 @@ class VercelGateway:
         response = httpx.post(
             "https://ai-gateway.vercel.sh/v1/evaluate",
             headers={
-                "Authorization": (
-                    f"Bearer {self.api_key}"
-                ),
+                "Authorization": (f"Bearer {self.api_key}"),
                 "Content-Type": "application/json",
             },
             json={
