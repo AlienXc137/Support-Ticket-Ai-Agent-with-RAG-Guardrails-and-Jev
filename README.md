@@ -39,7 +39,7 @@ The system separates **workflow orchestration** from the individual AI, retrieva
 ```mermaid
 flowchart TD
     A[Student Ticket] --> B[Presidio Sanitize / PII Mask]
-    B --> C[Input Safety Gate]
+    B --> C[NeMo Guardrails Safety Gate]
 
     C -->|Blocked| X[END]
     C -->|Allowed| D[Analyze Ticket]
@@ -79,7 +79,7 @@ flowchart LR
     LC[LangChain<br/>LLM • Prompts • Structured Output • Retrieval]
     VG[Vercel AI Gateway<br/>LLM • Embeddings • Jev]
     PR[Microsoft Presidio<br/>PII Detection / Redaction]
-    SG[Safety Model<br/>Input Safety / Injection Defense]
+    SG[Nvidea NeMo Guardrails Safety Model<br/>Input Safety / Injection Defense]
     RAG[Hybrid Retrieval<br/>BM25 + FAISS]
     TV[Tavily<br/>Controlled Web Search]
     JV[Jev<br/>Grounding / Citation Verification]
