@@ -103,11 +103,11 @@ flowchart LR
 | LangChain | Prompt composition, model abstraction, structured output, and retrieval integration |
 | Vercel AI Gateway | Unified gateway for LLM and embedding calls |
 | Microsoft Presidio | PII detection and anonymization |
-| Input Safety Model | Detection of unsafe or prompt-injection-like requests |
+| Nvidea NeMo Guardrails | Detection of unsafe or prompt-injection-like requests |
 | BM25 | Lexical retrieval |
 | FAISS | Semantic/vector retrieval |
 | Tavily | External search when explicitly permitted by policy |
-| Jev | Independent verification of grounding and citation support |
+| Typesafe Ai Jev | Independent verification of grounding and citation support |
 | SQLite | Durable ticket state and ticket history |
 | FastAPI | Backend API and application serving |
 | HTML/CSS/JavaScript | Primary dashboard |
