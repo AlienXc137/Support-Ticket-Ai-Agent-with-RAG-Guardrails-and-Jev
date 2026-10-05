@@ -4,11 +4,8 @@ A production-oriented **student support ticket triage and resolution system** bu
 
 The system accepts a student support ticket, protects sensitive information, checks for unsafe or adversarial input, analyzes the issue, retrieves relevant internal knowledge, determines whether the knowledge base is sufficient, optionally performs policy-controlled web search, drafts an evidence-grounded response, verifies the response with Jev, and finally routes the ticket either to automatic reply or human approval.
 
-Currently deployed on AWS EC2 at:
+Currently deployed on AWS EC2 at: http://3.13.169.209:8000
 
-```text
-http://3.13.169.209:8000
-```
 ---
 
 ## Table of Contents
