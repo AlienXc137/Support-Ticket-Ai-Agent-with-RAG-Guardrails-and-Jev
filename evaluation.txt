@@ -1,0 +1,67 @@
+==================================================
+ 📊 AGENT EVALUATION REPORT
+==================================================
+Total Tickets Run   : 33
+Total Time          : 430.11 seconds
+Avg Time Per Ticket : 13.03 seconds
+
+Category Classification Accuracy : 87.9% (29/33)
+Routing Decision Accuracy        : 48.5% (16/33)
+
+MISMATCHES & FAILURES:
+  - TC-01:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_NOT_ALLOWED', 'RISK_FLAG', 'WEB_REQUIRED_BUT_UNAVAILABLE']
+  - TC-03:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_NOT_ALLOWED', 'WEB_REQUIRED_BUT_UNAVAILABLE']
+  - TC-04:
+      Category mismatch: Expected 'course_access', got 'batch_access'
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-05:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_NOT_ALLOWED', 'WEB_REQUIRED_BUT_UNAVAILABLE']
+  - TC-18:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['VERIFICATION_FAILED']
+  - TC-19:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-20:
+      Category mismatch: Expected 'academic', got 'general'
+  - TC-21:
+      Category mismatch: Expected 'academic', got 'course_access'
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-22:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-23:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-24:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-25:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-26:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-28:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_NOT_ALLOWED', 'WEB_REQUIRED_BUT_UNAVAILABLE']
+  - TC-29:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-30:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_NOT_ALLOWED', 'WEB_REQUIRED_BUT_UNAVAILABLE']
+  - TC-31:
+      Decision mismatch: Expected 'AUTO_REPLY', got 'HUMAN_APPROVE'
+      Triggered Reasons: ['WEB_SOURCED_RESPONSE']
+  - TC-33:
+      Category mismatch: Expected 'general', got 'blocked'
+      Decision mismatch: Expected 'HUMAN_APPROVE', got 'BLOCKED'
+      Triggered Reasons: []
